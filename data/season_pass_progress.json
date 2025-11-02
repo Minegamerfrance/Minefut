@@ -1,0 +1,28 @@
+{
+  "active": "retro",
+  "claimed": {
+    "launch": [
+      1,
+      2,
+      3
+    ]
+  },
+  "unlocked": [
+    "launch",
+    "retro"
+  ],
+  "features": {
+    "sbc": true,
+    "defi": true,
+    "draft": true,
+    "sbc_hero": false,
+    "sbc_icon": false
+  },
+  "start_xp": {
+    "launch": 0,
+    "retro": 290
+  },
+  "frozen_xp": {
+    "launch": 290
+  }
+}

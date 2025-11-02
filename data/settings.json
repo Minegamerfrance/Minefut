@@ -1,0 +1,10 @@
+{
+  "ui_revamp": true,
+  "width": 1920,
+  "height": 1080,
+  "fullscreen": false,
+  "volume": 100,
+  "effects_quality": "high",
+  "show_fps": false,
+  "language": "fr"
+}

@@ -1,0 +1,3494 @@
+{
+  "players": [
+    {
+      "id": 1,
+      "name": "A. Dupont",
+      "rating": 85,
+      "rarity": "Rare"
+    },
+    {
+      "id": 2,
+      "name": "B. Martin",
+      "rating": 78,
+      "rarity": "Common"
+    },
+    {
+      "id": 3,
+      "name": "C. Silva",
+      "rating": 90,
+      "rarity": "Epic"
+    },
+    {
+      "id": 4,
+      "name": "F. Müller #75",
+      "rating": 80,
+      "rarity": "Epic"
+    },
+    {
+      "id": 5,
+      "name": "B. Martin #22",
+      "rating": 87,
+      "rarity": "Common"
+    },
+    {
+      "id": 6,
+      "name": "F. Müller #44",
+      "rating": 94,
+      "rarity": "Common"
+    },
+    {
+      "id": 7,
+      "name": "F. Müller #6",
+      "rating": 67,
+      "rarity": "Common"
+    },
+    {
+      "id": 8,
+      "name": "B. Martin #37",
+      "rating": 94,
+      "rarity": "Common"
+    },
+    {
+      "id": 9,
+      "name": "E. Smith #89",
+      "rating": 70,
+      "rarity": "Common"
+    },
+    {
+      "id": 10,
+      "name": "C. Silva #37",
+      "rating": 84,
+      "rarity": "Common"
+    },
+    {
+      "id": 11,
+      "name": "H. Costa #39",
+      "rating": 78,
+      "rarity": "Rare"
+    },
+    {
+      "id": 12,
+      "name": "G. Rossi #96",
+      "rating": 68,
+      "rarity": "Common"
+    },
+    {
+      "id": 13,
+      "name": "I. Novak #83",
+      "rating": 72,
+      "rarity": "Common"
+    },
+    {
+      "id": 14,
+      "name": "I. Novak #70",
+      "rating": 85,
+      "rarity": "Common"
+    },
+    {
+      "id": 15,
+      "name": "F. Müller #81",
+      "rating": 66,
+      "rarity": "Epic"
+    },
+    {
+      "id": 16,
+      "name": "H. Costa #32",
+      "rating": 80,
+      "rarity": "Common"
+    },
+    {
+      "id": 17,
+      "name": "G. Rossi #55",
+      "rating": 89,
+      "rarity": "Common"
+    },
+    {
+      "id": 18,
+      "name": "E. Smith #94",
+      "rating": 91,
+      "rarity": "Common"
+    },
+    {
+      "id": 19,
+      "name": "Z. OTW-Star #1",
+      "rating": 93,
+      "rarity": "OTW"
+    },
+    {
+      "id": 20,
+      "name": "D. Garcia #96",
+      "rating": 86,
+      "rarity": "Common"
+    },
+    {
+      "id": 21,
+      "name": "F. Müller #14",
+      "rating": 65,
+      "rarity": "Common"
+    },
+    {
+      "id": 22,
+      "name": "B. Martin #67",
+      "rating": 71,
+      "rarity": "Common"
+    },
+    {
+      "id": 23,
+      "name": "B. Martin #16",
+      "rating": 85,
+      "rarity": "Common"
+    },
+    {
+      "id": 24,
+      "name": "E. Smith #99",
+      "rating": 81,
+      "rarity": "Epic"
+    },
+    {
+      "id": 25,
+      "name": "E. Smith #36",
+      "rating": 93,
+      "rarity": "Rare"
+    },
+    {
+      "id": 26,
+      "name": "B. Martin #26",
+      "rating": 70,
+      "rarity": "Epic"
+    },
+    {
+      "id": 27,
+      "name": "H. Costa #87",
+      "rating": 75,
+      "rarity": "Rare"
+    },
+    {
+      "id": 28,
+      "name": "I. Novak #68",
+      "rating": 70,
+      "rarity": "Common"
+    },
+    {
+      "id": 29,
+      "name": "A. Dupont #62",
+      "rating": 68,
+      "rarity": "Common"
+    },
+    {
+      "id": 30,
+      "name": "J. Kim #86",
+      "rating": 82,
+      "rarity": "Common"
+    },
+    {
+      "id": 31,
+      "name": "J. Kim #64",
+      "rating": 84,
+      "rarity": "Common"
+    },
+    {
+      "id": 32,
+      "name": "B. Martin #42",
+      "rating": 72,
+      "rarity": "Common"
+    },
+    {
+      "id": 33,
+      "name": "B. Martin #57",
+      "rating": 75,
+      "rarity": "Rare"
+    },
+    {
+      "id": 34,
+      "name": "B. Martin #13",
+      "rating": 85,
+      "rarity": "Common"
+    },
+    {
+      "id": 35,
+      "name": "I. Novak #84",
+      "rating": 71,
+      "rarity": "Common"
+    },
+    {
+      "id": 36,
+      "name": "E. Smith #18",
+      "rating": 92,
+      "rarity": "Common"
+    },
+    {
+      "id": 37,
+      "name": "I. Novak #67",
+      "rating": 92,
+      "rarity": "Common"
+    },
+    {
+      "id": 38,
+      "name": "C. Silva #29",
+      "rating": 82,
+      "rarity": "Common"
+    },
+    {
+      "id": 39,
+      "name": "B. Martin #20",
+      "rating": 83,
+      "rarity": "Common"
+    },
+    {
+      "id": 40,
+      "name": "E. Smith #49",
+      "rating": 84,
+      "rarity": "Common"
+    },
+    {
+      "id": 41,
+      "name": "E. Smith #50",
+      "rating": 87,
+      "rarity": "Common"
+    },
+    {
+      "id": 42,
+      "name": "B. Martin #50",
+      "rating": 67,
+      "rarity": "Rare"
+    },
+    {
+      "id": 43,
+      "name": "H. Costa #36",
+      "rating": 68,
+      "rarity": "Common"
+    },
+    {
+      "id": 44,
+      "name": "D. Garcia #44",
+      "rating": 66,
+      "rarity": "Common"
+    },
+    {
+      "id": 45,
+      "name": "De Bruyne",
+      "rating": 86,
+      "rarity": "Common",
+      "image": "data/avatars/de_bruyne.png"
+    },
+    {
+      "id": 46,
+      "name": "Gyokeres",
+      "rating": 91,
+      "rarity": "Common",
+      "image": "data/avatars/gyokeres.png"
+    },
+    {
+      "id": 47,
+      "name": "Mbeumo",
+      "rating": 90,
+      "rarity": "Rare",
+      "image": "data/avatars/mbeumo.png"
+    },
+    {
+      "id": 48,
+      "name": "Tillman",
+      "rating": 71,
+      "rarity": "Common",
+      "image": "data/avatars/tillman.png"
+    },
+    {
+      "id": 49,
+      "name": "Gyokeres",
+      "rating": 67,
+      "rarity": "Common",
+      "image": "data/avatars/gyokeres.png"
+    },
+    {
+      "id": 50,
+      "name": "Coman",
+      "rating": 71,
+      "rarity": "Epic",
+      "image": "data/avatars/coman.png"
+    },
+    {
+      "id": 51,
+      "name": "Mbeumo",
+      "rating": 85,
+      "rarity": "Epic",
+      "image": "data/avatars/mbeumo.png"
+    },
+    {
+      "id": 52,
+      "name": "Alexander-Arnold",
+      "rating": 67,
+      "rarity": "Common",
+      "image": "data/avatars/alexander_arnold.png"
+    },
+    {
+      "id": 53,
+      "name": "Son",
+      "rating": 66,
+      "rarity": "Common",
+      "image": "data/avatars/son.png"
+    },
+    {
+      "id": 54,
+      "name": "Xhaka",
+      "rating": 72,
+      "rarity": "Rare",
+      "image": "data/avatars/xhaka.png"
+    },
+    {
+      "id": 55,
+      "name": "Alexander-Arnold",
+      "rating": 91,
+      "rarity": "Common",
+      "image": "data/avatars/alexander_arnold.png"
+    },
+    {
+      "id": 56,
+      "name": "Tillman",
+      "rating": 72,
+      "rarity": "Common",
+      "image": "data/avatars/tillman.png"
+    },
+    {
+      "id": 57,
+      "name": "Tillman",
+      "rating": 83,
+      "rarity": "Rare",
+      "image": "data/avatars/tillman.png"
+    },
+    {
+      "id": 58,
+      "name": "Donnarumma",
+      "rating": 71,
+      "rarity": "Common",
+      "image": "data/avatars/donnarumma.png"
+    },
+    {
+      "id": 59,
+      "name": "Son",
+      "rating": 86,
+      "rarity": "Common",
+      "image": "data/avatars/son.png"
+    },
+    {
+      "id": 60,
+      "name": "Wirtz",
+      "rating": 92,
+      "rarity": "Common",
+      "image": "data/avatars/wirtz.png"
+    },
+    {
+      "id": 61,
+      "name": "Gyokeres",
+      "rating": 70,
+      "rarity": "Common",
+      "image": "data/avatars/gyokeres.png"
+    },
+    {
+      "id": 62,
+      "name": "Son",
+      "rating": 71,
+      "rarity": "Common",
+      "image": "data/avatars/son.png"
+    },
+    {
+      "id": 63,
+      "name": "Alexander-Arnold",
+      "rating": 94,
+      "rarity": "Common",
+      "image": "data/avatars/alexander_arnold.png"
+    },
+    {
+      "id": 64,
+      "name": "Tillman",
+      "rating": 87,
+      "rarity": "Common",
+      "image": "data/avatars/tillman.png"
+    },
+    {
+      "id": 65,
+      "name": "Mbeumo",
+      "rating": 78,
+      "rarity": "Common",
+      "image": "data/avatars/mbeumo.png"
+    },
+    {
+      "id": 66,
+      "name": "Mbeumo",
+      "rating": 80,
+      "rarity": "Rare",
+      "image": "data/avatars/mbeumo.png"
+    },
+    {
+      "id": 67,
+      "name": "Son",
+      "rating": 92,
+      "rarity": "OTW",
+      "image": "data/avatars/son.png"
+    },
+    {
+      "id": 68,
+      "name": "Xhaka",
+      "rating": 79,
+      "rarity": "Common",
+      "image": "data/avatars/xhaka.png"
+    },
+    {
+      "id": 69,
+      "name": "Coman",
+      "rating": 78,
+      "rarity": "Rare",
+      "image": "data/avatars/coman.png"
+    },
+    {
+      "id": 70,
+      "name": "Mbeumo",
+      "rating": 91,
+      "rarity": "Common",
+      "image": "data/avatars/mbeumo.png"
+    },
+    {
+      "id": 71,
+      "name": "Donnarumma",
+      "rating": 92,
+      "rarity": "Common",
+      "image": "data/avatars/donnarumma.png"
+    },
+    {
+      "id": 72,
+      "name": "De Bruyne",
+      "rating": 89,
+      "rarity": "Common",
+      "image": "data/avatars/de_bruyne.png"
+    },
+    {
+      "id": 73,
+      "name": "Son",
+      "rating": 65,
+      "rarity": "Rare",
+      "image": "data/avatars/son.png"
+    },
+    {
+      "id": 74,
+      "name": "Mbeumo",
+      "rating": 82,
+      "rarity": "Common",
+      "image": "data/avatars/mbeumo.png"
+    },
+    {
+      "id": 75,
+      "name": "De Bruyne",
+      "rating": 66,
+      "rarity": "Common",
+      "image": "data/avatars/de_bruyne.png"
+    },
+    {
+      "id": 76,
+      "name": "Son",
+      "rating": 76,
+      "rarity": "Epic",
+      "image": "data/avatars/son.png"
+    },
+    {
+      "id": 77,
+      "name": "Xhaka",
+      "rating": 90,
+      "rarity": "Common",
+      "image": "data/avatars/xhaka.png"
+    },
+    {
+      "id": 78,
+      "name": "Rabiot",
+      "rating": 76,
+      "rarity": "Common",
+      "image": "data/avatars/rabiot.png"
+    },
+    {
+      "id": 79,
+      "name": "Xhaka",
+      "rating": 72,
+      "rarity": "Common",
+      "image": "data/avatars/xhaka.png"
+    },
+    {
+      "id": 80,
+      "name": "Son",
+      "rating": 70,
+      "rarity": "Common",
+      "image": "data/avatars/son.png"
+    },
+    {
+      "id": 81,
+      "name": "Mbeumo",
+      "rating": 65,
+      "rarity": "Epic",
+      "image": "data/avatars/mbeumo.png"
+    },
+    {
+      "id": 82,
+      "name": "Rabiot",
+      "rating": 93,
+      "rarity": "Common",
+      "image": "data/avatars/rabiot.png"
+    },
+    {
+      "id": 83,
+      "name": "Rabiot",
+      "rating": 73,
+      "rarity": "Rare",
+      "image": "data/avatars/rabiot.png"
+    },
+    {
+      "id": 84,
+      "name": "Xhaka",
+      "rating": 66,
+      "rarity": "Common",
+      "image": "data/avatars/xhaka.png"
+    },
+    {
+      "id": 85,
+      "name": "Wirtz",
+      "rating": 95,
+      "rarity": "OTW",
+      "image": "data/avatars/wirtz.png"
+    },
+    {
+      "id": 86,
+      "name": "Rabiot",
+      "rating": 81,
+      "rarity": "Common",
+      "image": "data/avatars/rabiot.png"
+    },
+    {
+      "id": 87,
+      "name": "Rabiot",
+      "rating": 93,
+      "rarity": "Common",
+      "image": "data/avatars/rabiot.png"
+    },
+    {
+      "id": 88,
+      "name": "Mbeumo",
+      "rating": 66,
+      "rarity": "Common",
+      "image": "data/avatars/mbeumo.png"
+    },
+    {
+      "id": 89,
+      "name": "Gyokeres",
+      "rating": 67,
+      "rarity": "Common",
+      "image": "data/avatars/gyokeres.png"
+    },
+    {
+      "id": 90,
+      "name": "De Bruyne",
+      "rating": 78,
+      "rarity": "Common",
+      "image": "data/avatars/de_bruyne.png"
+    },
+    {
+      "id": 91,
+      "name": "Xhaka",
+      "rating": 65,
+      "rarity": "Common",
+      "image": "data/avatars/xhaka.png"
+    },
+    {
+      "id": 92,
+      "name": "Mbeumo",
+      "rating": 86,
+      "rarity": "Rare",
+      "image": "data/avatars/mbeumo.png"
+    },
+    {
+      "id": 93,
+      "name": "Tillman",
+      "rating": 78,
+      "rarity": "Rare",
+      "image": "data/avatars/tillman.png"
+    },
+    {
+      "id": 94,
+      "name": "Xhaka",
+      "rating": 69,
+      "rarity": "Common",
+      "image": "data/avatars/xhaka.png"
+    },
+    {
+      "id": 95,
+      "name": "Rabiot",
+      "rating": 77,
+      "rarity": "Common",
+      "image": "data/avatars/rabiot.png"
+    },
+    {
+      "id": 96,
+      "name": "Son",
+      "rating": 71,
+      "rarity": "Common",
+      "image": "data/avatars/son.png"
+    },
+    {
+      "id": 97,
+      "name": "Coman",
+      "rating": 92,
+      "rarity": "Common",
+      "image": "data/avatars/coman.png"
+    },
+    {
+      "id": 98,
+      "name": "Xhaka",
+      "rating": 92,
+      "rarity": "Rare",
+      "image": "data/avatars/xhaka.png"
+    },
+    {
+      "id": 99,
+      "name": "Mbeumo",
+      "rating": 76,
+      "rarity": "Common",
+      "image": "data/avatars/mbeumo.png"
+    },
+    {
+      "id": 100,
+      "name": "Mbeumo",
+      "rating": 83,
+      "rarity": "Common",
+      "image": "data/avatars/mbeumo.png"
+    },
+    {
+      "id": 101,
+      "name": "Alexander-Arnold",
+      "rating": 86,
+      "rarity": "Common",
+      "image": "data/avatars/alexander_arnold.png"
+    },
+    {
+      "id": 102,
+      "name": "De Bruyne",
+      "rating": 72,
+      "rarity": "Common",
+      "image": "data/avatars/de_bruyne.png"
+    },
+    {
+      "id": 103,
+      "name": "Mbeumo",
+      "rating": 80,
+      "rarity": "Common",
+      "image": "data/avatars/mbeumo.png"
+    },
+    {
+      "id": 104,
+      "name": "Tillman",
+      "rating": 69,
+      "rarity": "Common",
+      "image": "data/avatars/tillman.png"
+    },
+    {
+      "id": 105,
+      "name": "Donnarumma",
+      "rating": 72,
+      "rarity": "Common",
+      "image": "data/avatars/donnarumma.png"
+    },
+    {
+      "id": 106,
+      "name": "Tillman",
+      "rating": 73,
+      "rarity": "Common",
+      "image": "data/avatars/tillman.png"
+    },
+    {
+      "id": 107,
+      "name": "Rabiot",
+      "rating": 86,
+      "rarity": "Common",
+      "image": "data/avatars/rabiot.png"
+    },
+    {
+      "id": 108,
+      "name": "Mbeumo",
+      "rating": 92,
+      "rarity": "Epic",
+      "image": "data/avatars/mbeumo.png"
+    },
+    {
+      "id": 109,
+      "name": "Coman",
+      "rating": 74,
+      "rarity": "Common",
+      "image": "data/avatars/coman.png"
+    },
+    {
+      "id": 110,
+      "name": "Xhaka",
+      "rating": 72,
+      "rarity": "Rare",
+      "image": "data/avatars/xhaka.png"
+    },
+    {
+      "id": 111,
+      "name": "Rabiot",
+      "rating": 68,
+      "rarity": "Common",
+      "image": "data/avatars/rabiot.png"
+    },
+    {
+      "id": 112,
+      "name": "Gyokeres",
+      "rating": 93,
+      "rarity": "Rare",
+      "image": "data/avatars/gyokeres.png"
+    },
+    {
+      "id": 113,
+      "name": "Xhaka",
+      "rating": 79,
+      "rarity": "Common",
+      "image": "data/avatars/xhaka.png"
+    },
+    {
+      "id": 114,
+      "name": "Xhaka",
+      "rating": 76,
+      "rarity": "Common",
+      "image": "data/avatars/xhaka.png"
+    },
+    {
+      "id": 115,
+      "name": "De Bruyne",
+      "rating": 86,
+      "rarity": "Common",
+      "image": "data/avatars/de_bruyne.png"
+    },
+    {
+      "id": 116,
+      "name": "Xhaka",
+      "rating": 71,
+      "rarity": "Common",
+      "image": "data/avatars/xhaka.png"
+    },
+    {
+      "id": 117,
+      "name": "Alexander-Arnold",
+      "rating": 77,
+      "rarity": "Common",
+      "image": "data/avatars/alexander_arnold.png"
+    },
+    {
+      "id": 118,
+      "name": "Mbeumo",
+      "rating": 90,
+      "rarity": "Rare",
+      "image": "data/avatars/mbeumo.png"
+    },
+    {
+      "id": 119,
+      "name": "Wirtz",
+      "rating": 74,
+      "rarity": "Common",
+      "image": "data/avatars/wirtz.png"
+    },
+    {
+      "id": 120,
+      "name": "Mbeumo",
+      "rating": 69,
+      "rarity": "Common",
+      "image": "data/avatars/mbeumo.png"
+    },
+    {
+      "id": 121,
+      "name": "Alexander-Arnold",
+      "rating": 78,
+      "rarity": "Epic",
+      "image": "data/avatars/alexander_arnold.png"
+    },
+    {
+      "id": 122,
+      "name": "Mbeumo",
+      "rating": 89,
+      "rarity": "Common",
+      "image": "data/avatars/mbeumo.png"
+    },
+    {
+      "id": 123,
+      "name": "Wirtz",
+      "rating": 90,
+      "rarity": "Common",
+      "image": "data/avatars/wirtz.png"
+    },
+    {
+      "id": 124,
+      "name": "Mbeumo",
+      "rating": 70,
+      "rarity": "Common",
+      "image": "data/avatars/mbeumo.png"
+    },
+    {
+      "id": 125,
+      "name": "De Bruyne",
+      "rating": 74,
+      "rarity": "Common",
+      "image": "data/avatars/de_bruyne.png"
+    },
+    {
+      "id": 126,
+      "name": "Mbeumo",
+      "rating": 85,
+      "rarity": "Common",
+      "image": "data/avatars/mbeumo.png"
+    },
+    {
+      "id": 127,
+      "name": "Wirtz",
+      "rating": 77,
+      "rarity": "Rare",
+      "image": "data/avatars/wirtz.png"
+    },
+    {
+      "id": 128,
+      "name": "Alexander-Arnold",
+      "rating": 89,
+      "rarity": "Rare",
+      "image": "data/avatars/alexander_arnold.png"
+    },
+    {
+      "id": 129,
+      "name": "Son",
+      "rating": 89,
+      "rarity": "Common",
+      "image": "data/avatars/son.png"
+    },
+    {
+      "id": 130,
+      "name": "Wirtz",
+      "rating": 73,
+      "rarity": "Epic",
+      "image": "data/avatars/wirtz.png"
+    },
+    {
+      "id": 131,
+      "name": "Donnarumma",
+      "rating": 70,
+      "rarity": "Common",
+      "image": "data/avatars/donnarumma.png"
+    },
+    {
+      "id": 132,
+      "name": "Alexander-Arnold",
+      "rating": 80,
+      "rarity": "Common",
+      "image": "data/avatars/alexander_arnold.png"
+    },
+    {
+      "id": 133,
+      "name": "Wirtz",
+      "rating": 82,
+      "rarity": "Common",
+      "image": "data/avatars/wirtz.png"
+    },
+    {
+      "id": 134,
+      "name": "Xhaka",
+      "rating": 67,
+      "rarity": "Rare",
+      "image": "data/avatars/xhaka.png"
+    },
+    {
+      "id": 135,
+      "name": "Xhaka",
+      "rating": 83,
+      "rarity": "Common",
+      "image": "data/avatars/xhaka.png"
+    },
+    {
+      "id": 136,
+      "name": "Rabiot",
+      "rating": 89,
+      "rarity": "Common",
+      "image": "data/avatars/rabiot.png"
+    },
+    {
+      "id": 137,
+      "name": "Xhaka",
+      "rating": 86,
+      "rarity": "Rare",
+      "image": "data/avatars/xhaka.png"
+    },
+    {
+      "id": 138,
+      "name": "Mbeumo",
+      "rating": 89,
+      "rarity": "Common",
+      "image": "data/avatars/mbeumo.png"
+    },
+    {
+      "id": 139,
+      "name": "Xhaka",
+      "rating": 77,
+      "rarity": "Rare",
+      "image": "data/avatars/xhaka.png"
+    },
+    {
+      "id": 140,
+      "name": "Tillman",
+      "rating": 69,
+      "rarity": "Common",
+      "image": "data/avatars/tillman.png"
+    },
+    {
+      "id": 141,
+      "name": "Rabiot",
+      "rating": 87,
+      "rarity": "Common",
+      "image": "data/avatars/rabiot.png"
+    },
+    {
+      "id": 142,
+      "name": "Wirtz",
+      "rating": 69,
+      "rarity": "Common",
+      "image": "data/avatars/wirtz.png"
+    },
+    {
+      "id": 143,
+      "name": "Son",
+      "rating": 93,
+      "rarity": "Common",
+      "image": "data/avatars/son.png"
+    },
+    {
+      "id": 144,
+      "name": "Xhaka",
+      "rating": 70,
+      "rarity": "Common",
+      "image": "data/avatars/xhaka.png"
+    },
+    {
+      "id": 145,
+      "name": "Son",
+      "rating": 92,
+      "rarity": "Common",
+      "image": "data/avatars/son.png"
+    },
+    {
+      "id": 146,
+      "name": "De Bruyne",
+      "rating": 67,
+      "rarity": "Epic",
+      "image": "data/avatars/de_bruyne.png"
+    },
+    {
+      "id": 147,
+      "name": "Rabiot",
+      "rating": 78,
+      "rarity": "Rare",
+      "image": "data/avatars/rabiot.png"
+    },
+    {
+      "id": 148,
+      "name": "Son",
+      "rating": 85,
+      "rarity": "Common",
+      "image": "data/avatars/son.png"
+    },
+    {
+      "id": 149,
+      "name": "Coman",
+      "rating": 85,
+      "rarity": "Common",
+      "image": "data/avatars/coman.png"
+    },
+    {
+      "id": 150,
+      "name": "Gyokeres",
+      "rating": 80,
+      "rarity": "Common",
+      "image": "data/avatars/gyokeres.png"
+    },
+    {
+      "id": 151,
+      "name": "Tillman",
+      "rating": 65,
+      "rarity": "Common",
+      "image": "data/avatars/tillman.png"
+    },
+    {
+      "id": 152,
+      "name": "Son",
+      "rating": 89,
+      "rarity": "Common",
+      "image": "data/avatars/son.png"
+    },
+    {
+      "id": 153,
+      "name": "Mbeumo",
+      "rating": 72,
+      "rarity": "Common",
+      "image": "data/avatars/mbeumo.png"
+    },
+    {
+      "id": 154,
+      "name": "Wirtz",
+      "rating": 74,
+      "rarity": "Common",
+      "image": "data/avatars/wirtz.png"
+    },
+    {
+      "id": 155,
+      "name": "Rabiot",
+      "rating": 85,
+      "rarity": "Rare",
+      "image": "data/avatars/rabiot.png"
+    },
+    {
+      "id": 156,
+      "name": "Son",
+      "rating": 85,
+      "rarity": "Common",
+      "image": "data/avatars/son.png"
+    },
+    {
+      "id": 157,
+      "name": "De Bruyne",
+      "rating": 76,
+      "rarity": "Rare",
+      "image": "data/avatars/de_bruyne.png"
+    },
+    {
+      "id": 158,
+      "name": "Wirtz",
+      "rating": 66,
+      "rarity": "Common",
+      "image": "data/avatars/wirtz.png"
+    },
+    {
+      "id": 159,
+      "name": "Donnarumma",
+      "rating": 84,
+      "rarity": "Common",
+      "image": "data/avatars/donnarumma.png"
+    },
+    {
+      "id": 160,
+      "name": "Wirtz",
+      "rating": 72,
+      "rarity": "Rare",
+      "image": "data/avatars/wirtz.png"
+    },
+    {
+      "id": 161,
+      "name": "Son",
+      "rating": 78,
+      "rarity": "Common",
+      "image": "data/avatars/son.png"
+    },
+    {
+      "id": 162,
+      "name": "Son",
+      "rating": 88,
+      "rarity": "Common",
+      "image": "data/avatars/son.png"
+    },
+    {
+      "id": 163,
+      "name": "Gyokeres",
+      "rating": 79,
+      "rarity": "Common",
+      "image": "data/avatars/gyokeres.png"
+    },
+    {
+      "id": 164,
+      "name": "Donnarumma",
+      "rating": 70,
+      "rarity": "Common",
+      "image": "data/avatars/donnarumma.png"
+    },
+    {
+      "id": 165,
+      "name": "Donnarumma",
+      "rating": 84,
+      "rarity": "Rare",
+      "image": "data/avatars/donnarumma.png"
+    },
+    {
+      "id": 166,
+      "name": "Alexander-Arnold",
+      "rating": 67,
+      "rarity": "Common",
+      "image": "data/avatars/alexander_arnold.png"
+    },
+    {
+      "id": 167,
+      "name": "Rabiot",
+      "rating": 92,
+      "rarity": "Common",
+      "image": "data/avatars/rabiot.png"
+    },
+    {
+      "id": 168,
+      "name": "Alexander-Arnold",
+      "rating": 65,
+      "rarity": "Common",
+      "image": "data/avatars/alexander_arnold.png"
+    },
+    {
+      "id": 169,
+      "name": "Donnarumma",
+      "rating": 69,
+      "rarity": "Common",
+      "image": "data/avatars/donnarumma.png"
+    },
+    {
+      "id": 170,
+      "name": "Mbappé",
+      "rating": 91,
+      "rarity": "Rare",
+      "image": "data/avatars/mbappe.png"
+    },
+    {
+      "id": 171,
+      "name": "Mbeumo",
+      "rating": 65,
+      "rarity": "Common",
+      "image": "data/avatars/mbeumo.png"
+    },
+    {
+      "id": 172,
+      "name": "Wirtz",
+      "rating": 83,
+      "rarity": "Common",
+      "image": "data/avatars/wirtz.png"
+    },
+    {
+      "id": 173,
+      "name": "Mbeumo",
+      "rating": 72,
+      "rarity": "Common",
+      "image": "data/avatars/mbeumo.png"
+    },
+    {
+      "id": 174,
+      "name": "Tillman",
+      "rating": 88,
+      "rarity": "Common",
+      "image": "data/avatars/tillman.png"
+    },
+    {
+      "id": 175,
+      "name": "Alexander-Arnold",
+      "rating": 88,
+      "rarity": "Common",
+      "image": "data/avatars/alexander_arnold.png"
+    },
+    {
+      "id": 176,
+      "name": "Wirtz",
+      "rating": 75,
+      "rarity": "Epic",
+      "image": "data/avatars/wirtz.png"
+    },
+    {
+      "id": 177,
+      "name": "Alexander-Arnold",
+      "rating": 77,
+      "rarity": "Common",
+      "image": "data/avatars/alexander_arnold.png"
+    },
+    {
+      "id": 178,
+      "name": "Gyokeres",
+      "rating": 73,
+      "rarity": "Legendary",
+      "image": "data/avatars/gyokeres.png"
+    },
+    {
+      "id": 179,
+      "name": "Alexander-Arnold",
+      "rating": 65,
+      "rarity": "Epic",
+      "image": "data/avatars/alexander_arnold.png"
+    },
+    {
+      "id": 180,
+      "name": "Xhaka",
+      "rating": 70,
+      "rarity": "Rare",
+      "image": "data/avatars/xhaka.png"
+    },
+    {
+      "id": 181,
+      "name": "Son",
+      "rating": 68,
+      "rarity": "Common",
+      "image": "data/avatars/son.png"
+    },
+    {
+      "id": 182,
+      "name": "De Bruyne",
+      "rating": 86,
+      "rarity": "Common",
+      "image": "data/avatars/de_bruyne.png"
+    },
+    {
+      "id": 183,
+      "name": "Rabiot",
+      "rating": 73,
+      "rarity": "Rare",
+      "image": "data/avatars/rabiot.png"
+    },
+    {
+      "id": 184,
+      "name": "Wirtz",
+      "rating": 75,
+      "rarity": "Common",
+      "image": "data/avatars/wirtz.png"
+    },
+    {
+      "id": 185,
+      "name": "Mbeumo",
+      "rating": 69,
+      "rarity": "Common",
+      "image": "data/avatars/mbeumo.png"
+    },
+    {
+      "id": 186,
+      "name": "Donnarumma",
+      "rating": 88,
+      "rarity": "Common",
+      "image": "data/avatars/donnarumma.png"
+    },
+    {
+      "id": 187,
+      "name": "Tillman",
+      "rating": 91,
+      "rarity": "Rare",
+      "image": "data/avatars/tillman.png"
+    },
+    {
+      "id": 188,
+      "name": "Coman",
+      "rating": 71,
+      "rarity": "Rare",
+      "image": "data/avatars/coman.png"
+    },
+    {
+      "id": 189,
+      "name": "Alexander-Arnold",
+      "rating": 70,
+      "rarity": "Epic",
+      "image": "data/avatars/alexander_arnold.png"
+    },
+    {
+      "id": 190,
+      "name": "Tillman",
+      "rating": 87,
+      "rarity": "Epic",
+      "image": "data/avatars/tillman.png"
+    },
+    {
+      "id": 191,
+      "name": "Gyokeres",
+      "rating": 71,
+      "rarity": "Legendary",
+      "image": "data/avatars/gyokeres.png"
+    },
+    {
+      "id": 192,
+      "name": "Tillman",
+      "rating": 78,
+      "rarity": "Common",
+      "image": "data/avatars/tillman.png"
+    },
+    {
+      "id": 193,
+      "name": "Gyokeres",
+      "rating": 85,
+      "rarity": "Common",
+      "image": "data/avatars/gyokeres.png"
+    },
+    {
+      "id": 194,
+      "name": "Alexander-Arnold",
+      "rating": 65,
+      "rarity": "Common",
+      "image": "data/avatars/alexander_arnold.png"
+    },
+    {
+      "id": 195,
+      "name": "De Bruyne",
+      "rating": 81,
+      "rarity": "Common",
+      "image": "data/avatars/de_bruyne.png"
+    },
+    {
+      "id": 196,
+      "name": "Alexander-Arnold",
+      "rating": 82,
+      "rarity": "Rare",
+      "image": "data/avatars/alexander_arnold.png"
+    },
+    {
+      "id": 197,
+      "name": "Alexander-Arnold",
+      "rating": 85,
+      "rarity": "Common",
+      "image": "data/avatars/alexander_arnold.png"
+    },
+    {
+      "id": 198,
+      "name": "Tillman",
+      "rating": 73,
+      "rarity": "Common",
+      "image": "data/avatars/tillman.png"
+    },
+    {
+      "id": 199,
+      "name": "Mbeumo",
+      "rating": 93,
+      "rarity": "Rare",
+      "image": "data/avatars/mbeumo.png"
+    },
+    {
+      "id": 200,
+      "name": "Tillman",
+      "rating": 75,
+      "rarity": "Common",
+      "image": "data/avatars/tillman.png"
+    },
+    {
+      "id": 201,
+      "name": "Gyokeres",
+      "rating": 92,
+      "rarity": "Common",
+      "image": "data/avatars/gyokeres.png"
+    },
+    {
+      "id": 202,
+      "name": "Son",
+      "rating": 71,
+      "rarity": "Rare",
+      "image": "data/avatars/son.png"
+    },
+    {
+      "id": 203,
+      "name": "Gyokeres",
+      "rating": 70,
+      "rarity": "Common",
+      "image": "data/avatars/gyokeres.png"
+    },
+    {
+      "id": 204,
+      "name": "Donnarumma",
+      "rating": 72,
+      "rarity": "Common",
+      "image": "data/avatars/donnarumma.png"
+    },
+    {
+      "id": 205,
+      "name": "Coman",
+      "rating": 93,
+      "rarity": "Common",
+      "image": "data/avatars/coman.png"
+    },
+    {
+      "id": 206,
+      "name": "Coman",
+      "rating": 80,
+      "rarity": "Common",
+      "image": "data/avatars/coman.png"
+    },
+    {
+      "id": 207,
+      "name": "De Bruyne",
+      "rating": 65,
+      "rarity": "Common",
+      "image": "data/avatars/de_bruyne.png"
+    },
+    {
+      "id": 208,
+      "name": "Mbeumo",
+      "rating": 68,
+      "rarity": "Common",
+      "image": "data/avatars/mbeumo.png"
+    },
+    {
+      "id": 209,
+      "name": "De Bruyne",
+      "rating": 77,
+      "rarity": "Common",
+      "image": "data/avatars/de_bruyne.png"
+    },
+    {
+      "id": 210,
+      "name": "Alexander-Arnold",
+      "rating": 84,
+      "rarity": "Common",
+      "image": "data/avatars/alexander_arnold.png"
+    },
+    {
+      "id": 211,
+      "name": "Rabiot",
+      "rating": 79,
+      "rarity": "Rare",
+      "image": "data/avatars/rabiot.png"
+    },
+    {
+      "id": 212,
+      "name": "Xhaka",
+      "rating": 78,
+      "rarity": "Common",
+      "image": "data/avatars/xhaka.png"
+    },
+    {
+      "id": 213,
+      "name": "Donnarumma",
+      "rating": 91,
+      "rarity": "Common",
+      "image": "data/avatars/donnarumma.png"
+    },
+    {
+      "id": 214,
+      "name": "Coman",
+      "rating": 67,
+      "rarity": "Common",
+      "image": "data/avatars/coman.png"
+    },
+    {
+      "id": 215,
+      "name": "Wirtz",
+      "rating": 74,
+      "rarity": "Epic",
+      "image": "data/avatars/wirtz.png"
+    },
+    {
+      "id": 216,
+      "name": "Rabiot",
+      "rating": 87,
+      "rarity": "Common",
+      "image": "data/avatars/rabiot.png"
+    },
+    {
+      "id": 217,
+      "name": "Gyokeres",
+      "rating": 65,
+      "rarity": "Rare",
+      "image": "data/avatars/gyokeres.png"
+    },
+    {
+      "id": 218,
+      "name": "De Bruyne",
+      "rating": 68,
+      "rarity": "Common",
+      "image": "data/avatars/de_bruyne.png"
+    },
+    {
+      "id": 219,
+      "name": "Donnarumma",
+      "rating": 70,
+      "rarity": "Rare",
+      "image": "data/avatars/donnarumma.png"
+    },
+    {
+      "id": 220,
+      "name": "Xhaka",
+      "rating": 71,
+      "rarity": "Common",
+      "image": "data/avatars/xhaka.png"
+    },
+    {
+      "id": 221,
+      "name": "De Bruyne",
+      "rating": 88,
+      "rarity": "Common",
+      "image": "data/avatars/de_bruyne.png"
+    },
+    {
+      "id": 222,
+      "name": "Gyokeres",
+      "rating": 86,
+      "rarity": "Common",
+      "image": "data/avatars/gyokeres.png"
+    },
+    {
+      "id": 223,
+      "name": "Rabiot",
+      "rating": 73,
+      "rarity": "Common",
+      "image": "data/avatars/rabiot.png"
+    },
+    {
+      "id": 224,
+      "name": "Tillman",
+      "rating": 82,
+      "rarity": "Common",
+      "image": "data/avatars/tillman.png"
+    },
+    {
+      "id": 225,
+      "name": "De Bruyne",
+      "rating": 74,
+      "rarity": "Common",
+      "image": "data/avatars/de_bruyne.png"
+    },
+    {
+      "id": 226,
+      "name": "Xhaka",
+      "rating": 87,
+      "rarity": "Common",
+      "image": "data/avatars/xhaka.png"
+    },
+    {
+      "id": 227,
+      "name": "Mbeumo",
+      "rating": 69,
+      "rarity": "Legendary",
+      "image": "data/avatars/mbeumo.png"
+    },
+    {
+      "id": 228,
+      "name": "Rabiot",
+      "rating": 74,
+      "rarity": "Common",
+      "image": "data/avatars/rabiot.png"
+    },
+    {
+      "id": 229,
+      "name": "Gyokeres",
+      "rating": 68,
+      "rarity": "Rare",
+      "image": "data/avatars/gyokeres.png"
+    },
+    {
+      "id": 230,
+      "name": "Mbeumo",
+      "rating": 83,
+      "rarity": "Common",
+      "image": "data/avatars/mbeumo.png"
+    },
+    {
+      "id": 231,
+      "name": "Tillman",
+      "rating": 78,
+      "rarity": "Common",
+      "image": "data/avatars/tillman.png"
+    },
+    {
+      "id": 232,
+      "name": "Son",
+      "rating": 71,
+      "rarity": "Common",
+      "image": "data/avatars/son.png"
+    },
+    {
+      "id": 233,
+      "name": "Coman",
+      "rating": 72,
+      "rarity": "Common",
+      "image": "data/avatars/coman.png"
+    },
+    {
+      "id": 234,
+      "name": "Wirtz",
+      "rating": 77,
+      "rarity": "Common",
+      "image": "data/avatars/wirtz.png"
+    },
+    {
+      "id": 235,
+      "name": "Xhaka",
+      "rating": 82,
+      "rarity": "Epic",
+      "image": "data/avatars/xhaka.png"
+    },
+    {
+      "id": 236,
+      "name": "Coman",
+      "rating": 77,
+      "rarity": "Common",
+      "image": "data/avatars/coman.png"
+    },
+    {
+      "id": 237,
+      "name": "Rabiot",
+      "rating": 81,
+      "rarity": "Common",
+      "image": "data/avatars/rabiot.png"
+    },
+    {
+      "id": 238,
+      "name": "Tillman",
+      "rating": 83,
+      "rarity": "Rare",
+      "image": "data/avatars/tillman.png"
+    },
+    {
+      "id": 239,
+      "name": "Alexander-Arnold",
+      "rating": 86,
+      "rarity": "Common",
+      "image": "data/avatars/alexander_arnold.png"
+    },
+    {
+      "id": 240,
+      "name": "Coman",
+      "rating": 93,
+      "rarity": "Common",
+      "image": "data/avatars/coman.png"
+    },
+    {
+      "id": 241,
+      "name": "De Bruyne",
+      "rating": 66,
+      "rarity": "Common",
+      "image": "data/avatars/de_bruyne.png"
+    },
+    {
+      "id": 242,
+      "name": "Donnarumma",
+      "rating": 92,
+      "rarity": "Rare",
+      "image": "data/avatars/donnarumma.png"
+    },
+    {
+      "id": 243,
+      "name": "Coman",
+      "rating": 75,
+      "rarity": "Common",
+      "image": "data/avatars/coman.png"
+    },
+    {
+      "id": 244,
+      "name": "Alexander-Arnold",
+      "rating": 80,
+      "rarity": "Rare",
+      "image": "data/avatars/alexander_arnold.png"
+    },
+    {
+      "id": 245,
+      "name": "Rabiot",
+      "rating": 73,
+      "rarity": "Common",
+      "image": "data/avatars/rabiot.png"
+    },
+    {
+      "id": 246,
+      "name": "Son",
+      "rating": 78,
+      "rarity": "Rare",
+      "image": "data/avatars/son.png"
+    },
+    {
+      "id": 247,
+      "name": "Donnarumma",
+      "rating": 89,
+      "rarity": "Epic",
+      "image": "data/avatars/donnarumma.png"
+    },
+    {
+      "id": 248,
+      "name": "De Bruyne",
+      "rating": 84,
+      "rarity": "Common",
+      "image": "data/avatars/de_bruyne.png"
+    },
+    {
+      "id": 249,
+      "name": "Xhaka",
+      "rating": 87,
+      "rarity": "Common",
+      "image": "data/avatars/xhaka.png"
+    },
+    {
+      "id": 250,
+      "name": "De Bruyne",
+      "rating": 93,
+      "rarity": "Common",
+      "image": "data/avatars/de_bruyne.png"
+    },
+    {
+      "id": 251,
+      "name": "Mbeumo",
+      "rating": 70,
+      "rarity": "Common",
+      "image": "data/avatars/mbeumo.png"
+    },
+    {
+      "id": 252,
+      "name": "Mbeumo",
+      "rating": 65,
+      "rarity": "Common",
+      "image": "data/avatars/mbeumo.png"
+    },
+    {
+      "id": 253,
+      "name": "Gyokeres",
+      "rating": 79,
+      "rarity": "Common",
+      "image": "data/avatars/gyokeres.png"
+    },
+    {
+      "id": 254,
+      "name": "Son",
+      "rating": 70,
+      "rarity": "Rare",
+      "image": "data/avatars/son.png"
+    },
+    {
+      "id": 255,
+      "name": "Donnarumma",
+      "rating": 77,
+      "rarity": "Common",
+      "image": "data/avatars/donnarumma.png"
+    },
+    {
+      "id": 256,
+      "name": "Alexander-Arnold",
+      "rating": 87,
+      "rarity": "Common",
+      "image": "data/avatars/alexander_arnold.png"
+    },
+    {
+      "id": 257,
+      "name": "Gyokeres",
+      "rating": 82,
+      "rarity": "Common",
+      "image": "data/avatars/gyokeres.png"
+    },
+    {
+      "id": 258,
+      "name": "Alexander-Arnold",
+      "rating": 90,
+      "rarity": "OTW",
+      "image": "data/avatars/otw_arnold.png"
+    },
+    {
+      "id": 259,
+      "name": "Tillman",
+      "rating": 79,
+      "rarity": "Common",
+      "image": "data/avatars/tillman.png"
+    },
+    {
+      "id": 260,
+      "name": "Son",
+      "rating": 70,
+      "rarity": "Common",
+      "image": "data/avatars/son.png"
+    },
+    {
+      "id": 261,
+      "name": "Tillman",
+      "rating": 84,
+      "rarity": "Common",
+      "image": "data/avatars/tillman.png"
+    },
+    {
+      "id": 262,
+      "name": "Tillman",
+      "rating": 88,
+      "rarity": "Common",
+      "image": "data/avatars/tillman.png"
+    },
+    {
+      "id": 263,
+      "name": "Rabiot",
+      "rating": 90,
+      "rarity": "Common",
+      "image": "data/avatars/rabiot.png"
+    },
+    {
+      "id": 264,
+      "name": "De Bruyne",
+      "rating": 88,
+      "rarity": "Common",
+      "image": "data/avatars/de_bruyne.png"
+    },
+    {
+      "id": 265,
+      "name": "Xhaka",
+      "rating": 70,
+      "rarity": "Common",
+      "image": "data/avatars/xhaka.png"
+    },
+    {
+      "id": 266,
+      "name": "Wirtz",
+      "rating": 93,
+      "rarity": "Common",
+      "image": "data/avatars/wirtz.png"
+    },
+    {
+      "id": 267,
+      "name": "Xhaka",
+      "rating": 87,
+      "rarity": "Common",
+      "image": "data/avatars/xhaka.png"
+    },
+    {
+      "id": 268,
+      "name": "Xhaka",
+      "rating": 89,
+      "rarity": "Common",
+      "image": "data/avatars/xhaka.png"
+    },
+    {
+      "id": 269,
+      "name": "Son",
+      "rating": 86,
+      "rarity": "Common",
+      "image": "data/avatars/son.png"
+    },
+    {
+      "id": 270,
+      "name": "Alexander-Arnold",
+      "rating": 94,
+      "rarity": "Common",
+      "image": "data/avatars/alexander_arnold.png"
+    },
+    {
+      "id": 271,
+      "name": "Wirtz",
+      "rating": 76,
+      "rarity": "Common",
+      "image": "data/avatars/wirtz.png"
+    },
+    {
+      "id": 272,
+      "name": "Rabiot",
+      "rating": 84,
+      "rarity": "Common",
+      "image": "data/avatars/rabiot.png"
+    },
+    {
+      "id": 273,
+      "name": "Mbeumo",
+      "rating": 67,
+      "rarity": "Rare",
+      "image": "data/avatars/mbeumo.png"
+    },
+    {
+      "id": 274,
+      "name": "Coman",
+      "rating": 77,
+      "rarity": "Rare",
+      "image": "data/avatars/coman.png"
+    },
+    {
+      "id": 275,
+      "name": "Rabiot",
+      "rating": 69,
+      "rarity": "Rare",
+      "image": "data/avatars/rabiot.png"
+    },
+    {
+      "id": 276,
+      "name": "Mbeumo",
+      "rating": 74,
+      "rarity": "Common",
+      "image": "data/avatars/mbeumo.png"
+    },
+    {
+      "id": 277,
+      "name": "Mbeumo",
+      "rating": 68,
+      "rarity": "Common",
+      "image": "data/avatars/mbeumo.png"
+    },
+    {
+      "id": 278,
+      "name": "Son",
+      "rating": 77,
+      "rarity": "Common",
+      "image": "data/avatars/son.png"
+    },
+    {
+      "id": 279,
+      "name": "Wirtz",
+      "rating": 69,
+      "rarity": "Rare",
+      "image": "data/avatars/wirtz.png"
+    },
+    {
+      "id": 280,
+      "name": "De Bruyne",
+      "rating": 71,
+      "rarity": "Common",
+      "image": "data/avatars/de_bruyne.png"
+    },
+    {
+      "id": 281,
+      "name": "Mbeumo",
+      "rating": 92,
+      "rarity": "Common",
+      "image": "data/avatars/mbeumo.png"
+    },
+    {
+      "id": 282,
+      "name": "Tillman",
+      "rating": 79,
+      "rarity": "Rare",
+      "image": "data/avatars/tillman.png"
+    },
+    {
+      "id": 283,
+      "name": "Tillman",
+      "rating": 77,
+      "rarity": "Rare",
+      "image": "data/avatars/tillman.png"
+    },
+    {
+      "id": 284,
+      "name": "Donnarumma",
+      "rating": 73,
+      "rarity": "Rare",
+      "image": "data/avatars/donnarumma.png"
+    },
+    {
+      "id": 285,
+      "name": "De Bruyne",
+      "rating": 83,
+      "rarity": "Common",
+      "image": "data/avatars/de_bruyne.png"
+    },
+    {
+      "id": 286,
+      "name": "Rabiot",
+      "rating": 80,
+      "rarity": "Common",
+      "image": "data/avatars/rabiot.png"
+    },
+    {
+      "id": 287,
+      "name": "Coman",
+      "rating": 78,
+      "rarity": "Common",
+      "image": "data/avatars/coman.png"
+    },
+    {
+      "id": 288,
+      "name": "Coman",
+      "rating": 86,
+      "rarity": "Common",
+      "image": "data/avatars/coman.png"
+    },
+    {
+      "id": 289,
+      "name": "Rabiot",
+      "rating": 84,
+      "rarity": "Common",
+      "image": "data/avatars/rabiot.png"
+    },
+    {
+      "id": 290,
+      "name": "Xhaka",
+      "rating": 65,
+      "rarity": "Common",
+      "image": "data/avatars/xhaka.png"
+    },
+    {
+      "id": 291,
+      "name": "Tillman",
+      "rating": 87,
+      "rarity": "Rare",
+      "image": "data/avatars/tillman.png"
+    },
+    {
+      "id": 292,
+      "name": "Son",
+      "rating": 88,
+      "rarity": "Common",
+      "image": "data/avatars/son.png"
+    },
+    {
+      "id": 293,
+      "name": "Mbeumo",
+      "rating": 83,
+      "rarity": "Common",
+      "image": "data/avatars/mbeumo.png"
+    },
+    {
+      "id": 294,
+      "name": "Tillman",
+      "rating": 69,
+      "rarity": "Common",
+      "image": "data/avatars/tillman.png"
+    },
+    {
+      "id": 295,
+      "name": "Mbeumo",
+      "rating": 90,
+      "rarity": "Common",
+      "image": "data/avatars/mbeumo.png"
+    },
+    {
+      "id": 296,
+      "name": "Xhaka",
+      "rating": 80,
+      "rarity": "Rare",
+      "image": "data/avatars/xhaka.png"
+    },
+    {
+      "id": 297,
+      "name": "De Bruyne",
+      "rating": 81,
+      "rarity": "Common",
+      "image": "data/avatars/de_bruyne.png"
+    },
+    {
+      "id": 298,
+      "name": "Gyokeres",
+      "rating": 76,
+      "rarity": "Common",
+      "image": "data/avatars/gyokeres.png"
+    },
+    {
+      "id": 299,
+      "name": "Mbeumo",
+      "rating": 70,
+      "rarity": "Common",
+      "image": "data/avatars/mbeumo.png"
+    },
+    {
+      "id": 300,
+      "name": "Wirtz",
+      "rating": 81,
+      "rarity": "Common",
+      "image": "data/avatars/wirtz.png"
+    },
+    {
+      "id": 301,
+      "name": "De Bruyne",
+      "rating": 93,
+      "rarity": "Rare",
+      "image": "data/avatars/de_bruyne.png"
+    },
+    {
+      "id": 302,
+      "name": "Mbeumo",
+      "rating": 70,
+      "rarity": "Epic",
+      "image": "data/avatars/mbeumo.png"
+    },
+    {
+      "id": 303,
+      "name": "Alexander-Arnold",
+      "rating": 79,
+      "rarity": "Common",
+      "image": "data/avatars/alexander_arnold.png"
+    },
+    {
+      "id": 304,
+      "name": "Alexander-Arnold",
+      "rating": 65,
+      "rarity": "Rare",
+      "image": "data/avatars/alexander_arnold.png"
+    },
+    {
+      "id": 305,
+      "name": "De Bruyne",
+      "rating": 74,
+      "rarity": "Common",
+      "image": "data/avatars/de_bruyne.png"
+    },
+    {
+      "id": 306,
+      "name": "Gyokeres",
+      "rating": 82,
+      "rarity": "Rare",
+      "image": "data/avatars/gyokeres.png"
+    },
+    {
+      "id": 307,
+      "name": "Coman",
+      "rating": 69,
+      "rarity": "Common",
+      "image": "data/avatars/coman.png"
+    },
+    {
+      "id": 308,
+      "name": "Mbeumo",
+      "rating": 79,
+      "rarity": "Common",
+      "image": "data/avatars/mbeumo.png"
+    },
+    {
+      "id": 309,
+      "name": "Wirtz",
+      "rating": 77,
+      "rarity": "Common",
+      "image": "data/avatars/wirtz.png"
+    },
+    {
+      "id": 310,
+      "name": "Wirtz",
+      "rating": 85,
+      "rarity": "Common",
+      "image": "data/avatars/wirtz.png"
+    },
+    {
+      "id": 311,
+      "name": "Alexander-Arnold",
+      "rating": 90,
+      "rarity": "Common",
+      "image": "data/avatars/alexander_arnold.png"
+    },
+    {
+      "id": 312,
+      "name": "Mbeumo",
+      "rating": 65,
+      "rarity": "Rare",
+      "image": "data/avatars/mbeumo.png"
+    },
+    {
+      "id": 313,
+      "name": "Gyokeres",
+      "rating": 86,
+      "rarity": "Common",
+      "image": "data/avatars/gyokeres.png"
+    },
+    {
+      "id": 314,
+      "name": "Rabiot",
+      "rating": 79,
+      "rarity": "Rare",
+      "image": "data/avatars/rabiot.png"
+    },
+    {
+      "id": 315,
+      "name": "Xhaka",
+      "rating": 67,
+      "rarity": "Common",
+      "image": "data/avatars/xhaka.png"
+    },
+    {
+      "id": 316,
+      "name": "De Bruyne",
+      "rating": 90,
+      "rarity": "Common",
+      "image": "data/avatars/de_bruyne.png"
+    },
+    {
+      "id": 317,
+      "name": "Xhaka",
+      "rating": 89,
+      "rarity": "Common",
+      "image": "data/avatars/xhaka.png"
+    },
+    {
+      "id": 318,
+      "name": "Wirtz",
+      "rating": 67,
+      "rarity": "Common",
+      "image": "data/avatars/wirtz.png"
+    },
+    {
+      "id": 319,
+      "name": "Rabiot",
+      "rating": 81,
+      "rarity": "Common",
+      "image": "data/avatars/rabiot.png"
+    },
+    {
+      "id": 320,
+      "name": "Rabiot",
+      "rating": 81,
+      "rarity": "Epic",
+      "image": "data/avatars/rabiot.png"
+    },
+    {
+      "id": 321,
+      "name": "Rabiot",
+      "rating": 74,
+      "rarity": "Common",
+      "image": "data/avatars/rabiot.png"
+    },
+    {
+      "id": 322,
+      "name": "Son",
+      "rating": 92,
+      "rarity": "Rare",
+      "image": "data/avatars/son.png"
+    },
+    {
+      "id": 323,
+      "name": "Son",
+      "rating": 69,
+      "rarity": "Epic",
+      "image": "data/avatars/son.png"
+    },
+    {
+      "id": 324,
+      "name": "Donnarumma",
+      "rating": 92,
+      "rarity": "Common",
+      "image": "data/avatars/donnarumma.png"
+    },
+    {
+      "id": 325,
+      "name": "Alexander-Arnold",
+      "rating": 92,
+      "rarity": "Epic",
+      "image": "data/avatars/alexander_arnold.png"
+    },
+    {
+      "id": 326,
+      "name": "De Bruyne",
+      "rating": 85,
+      "rarity": "Rare",
+      "image": "data/avatars/de_bruyne.png"
+    },
+    {
+      "id": 327,
+      "name": "Donnarumma",
+      "rating": 90,
+      "rarity": "Common",
+      "image": "data/avatars/donnarumma.png"
+    },
+    {
+      "id": 328,
+      "name": "Mbeumo",
+      "rating": 75,
+      "rarity": "Common",
+      "image": "data/avatars/mbeumo.png"
+    },
+    {
+      "id": 329,
+      "name": "Coman",
+      "rating": 78,
+      "rarity": "Epic",
+      "image": "data/avatars/coman.png"
+    },
+    {
+      "id": 330,
+      "name": "De Bruyne",
+      "rating": 91,
+      "rarity": "Rare",
+      "image": "data/avatars/de_bruyne.png"
+    },
+    {
+      "id": 331,
+      "name": "Gyokeres",
+      "rating": 72,
+      "rarity": "Common",
+      "image": "data/avatars/gyokeres.png"
+    },
+    {
+      "id": 332,
+      "name": "Rabiot",
+      "rating": 67,
+      "rarity": "Common",
+      "image": "data/avatars/rabiot.png"
+    },
+    {
+      "id": 333,
+      "name": "Alexander-Arnold",
+      "rating": 77,
+      "rarity": "Common",
+      "image": "data/avatars/alexander_arnold.png"
+    },
+    {
+      "id": 334,
+      "name": "Son",
+      "rating": 89,
+      "rarity": "Common",
+      "image": "data/avatars/son.png"
+    },
+    {
+      "id": 335,
+      "name": "Alexander-Arnold",
+      "rating": 80,
+      "rarity": "Common",
+      "image": "data/avatars/alexander_arnold.png"
+    },
+    {
+      "id": 336,
+      "name": "Gyokeres",
+      "rating": 90,
+      "rarity": "Common",
+      "image": "data/avatars/gyokeres.png"
+    },
+    {
+      "id": 337,
+      "name": "De Bruyne",
+      "rating": 89,
+      "rarity": "Common",
+      "image": "data/avatars/de_bruyne.png"
+    },
+    {
+      "id": 338,
+      "name": "Rabiot",
+      "rating": 82,
+      "rarity": "Common",
+      "image": "data/avatars/rabiot.png"
+    },
+    {
+      "id": 339,
+      "name": "Rabiot",
+      "rating": 65,
+      "rarity": "Common",
+      "image": "data/avatars/rabiot.png"
+    },
+    {
+      "id": 340,
+      "name": "Son",
+      "rating": 76,
+      "rarity": "Common",
+      "image": "data/avatars/son.png"
+    },
+    {
+      "id": 341,
+      "name": "Tillman",
+      "rating": 80,
+      "rarity": "Common",
+      "image": "data/avatars/tillman.png"
+    },
+    {
+      "id": 342,
+      "name": "De Bruyne",
+      "rating": 87,
+      "rarity": "Common",
+      "image": "data/avatars/de_bruyne.png"
+    },
+    {
+      "id": 343,
+      "name": "Donnarumma",
+      "rating": 80,
+      "rarity": "Rare",
+      "image": "data/avatars/donnarumma.png"
+    },
+    {
+      "id": 344,
+      "name": "Rabiot",
+      "rating": 85,
+      "rarity": "Common",
+      "image": "data/avatars/rabiot.png"
+    },
+    {
+      "id": 345,
+      "name": "Alexander-Arnold",
+      "rating": 79,
+      "rarity": "Common",
+      "image": "data/avatars/alexander_arnold.png"
+    },
+    {
+      "id": 346,
+      "name": "Tillman",
+      "rating": 92,
+      "rarity": "Common",
+      "image": "data/avatars/tillman.png"
+    },
+    {
+      "id": 347,
+      "name": "Xhaka",
+      "rating": 66,
+      "rarity": "Common",
+      "image": "data/avatars/xhaka.png"
+    },
+    {
+      "id": 348,
+      "name": "De Bruyne",
+      "rating": 91,
+      "rarity": "Common",
+      "image": "data/avatars/de_bruyne.png"
+    },
+    {
+      "id": 349,
+      "name": "Gyokeres",
+      "rating": 75,
+      "rarity": "Common",
+      "image": "data/avatars/gyokeres.png"
+    },
+    {
+      "id": 350,
+      "name": "Wirtz",
+      "rating": 80,
+      "rarity": "Common",
+      "image": "data/avatars/wirtz.png"
+    },
+    {
+      "id": 351,
+      "name": "Gyokeres",
+      "rating": 79,
+      "rarity": "Rare",
+      "image": "data/avatars/gyokeres.png"
+    },
+    {
+      "id": 352,
+      "name": "Tillman",
+      "rating": 94,
+      "rarity": "Rare",
+      "image": "data/avatars/tillman.png"
+    },
+    {
+      "id": 353,
+      "name": "Coman",
+      "rating": 65,
+      "rarity": "Common",
+      "image": "data/avatars/coman.png"
+    },
+    {
+      "id": 354,
+      "name": "Alexander-Arnold",
+      "rating": 69,
+      "rarity": "Epic",
+      "image": "data/avatars/alexander_arnold.png"
+    },
+    {
+      "id": 355,
+      "name": "Donnarumma",
+      "rating": 86,
+      "rarity": "Rare",
+      "image": "data/avatars/donnarumma.png"
+    },
+    {
+      "id": 356,
+      "name": "Wirtz",
+      "rating": 66,
+      "rarity": "Rare",
+      "image": "data/avatars/wirtz.png"
+    },
+    {
+      "id": 357,
+      "name": "Xhaka",
+      "rating": 76,
+      "rarity": "Common",
+      "image": "data/avatars/xhaka.png"
+    },
+    {
+      "id": 358,
+      "name": "Rabiot",
+      "rating": 80,
+      "rarity": "Common",
+      "image": "data/avatars/rabiot.png"
+    },
+    {
+      "id": 359,
+      "name": "Son",
+      "rating": 80,
+      "rarity": "Rare",
+      "image": "data/avatars/son.png"
+    },
+    {
+      "id": 360,
+      "name": "Son",
+      "rating": 72,
+      "rarity": "Legendary",
+      "image": "data/avatars/son.png"
+    },
+    {
+      "id": 361,
+      "name": "De Bruyne",
+      "rating": 70,
+      "rarity": "Epic",
+      "image": "data/avatars/de_bruyne.png"
+    },
+    {
+      "id": 362,
+      "name": "Xhaka",
+      "rating": 71,
+      "rarity": "Common",
+      "image": "data/avatars/xhaka.png"
+    },
+    {
+      "id": 363,
+      "name": "Mbeumo",
+      "rating": 80,
+      "rarity": "Common",
+      "image": "data/avatars/mbeumo.png"
+    },
+    {
+      "id": 364,
+      "name": "Rabiot",
+      "rating": 67,
+      "rarity": "Common",
+      "image": "data/avatars/rabiot.png"
+    },
+    {
+      "id": 365,
+      "name": "Xhaka",
+      "rating": 80,
+      "rarity": "Common",
+      "image": "data/avatars/xhaka.png"
+    },
+    {
+      "id": 366,
+      "name": "Tillman",
+      "rating": 80,
+      "rarity": "Common",
+      "image": "data/avatars/tillman.png"
+    },
+    {
+      "id": 367,
+      "name": "Wirtz",
+      "rating": 74,
+      "rarity": "Rare",
+      "image": "data/avatars/wirtz.png"
+    },
+    {
+      "id": 368,
+      "name": "Mbeumo",
+      "rating": 67,
+      "rarity": "Common",
+      "image": "data/avatars/mbeumo.png"
+    },
+    {
+      "id": 369,
+      "name": "Son",
+      "rating": 66,
+      "rarity": "Common",
+      "image": "data/avatars/son.png"
+    },
+    {
+      "id": 370,
+      "name": "Donnarumma",
+      "rating": 67,
+      "rarity": "Common",
+      "image": "data/avatars/donnarumma.png"
+    },
+    {
+      "id": 371,
+      "name": "Rabiot",
+      "rating": 93,
+      "rarity": "Common",
+      "image": "data/avatars/rabiot.png"
+    },
+    {
+      "id": 372,
+      "name": "Alexander-Arnold",
+      "rating": 75,
+      "rarity": "Common",
+      "image": "data/avatars/alexander_arnold.png"
+    },
+    {
+      "id": 373,
+      "name": "Xhaka",
+      "rating": 94,
+      "rarity": "OTW",
+      "image": "data/avatars/xhaka.png"
+    },
+    {
+      "id": 374,
+      "name": "Donnarumma",
+      "rating": 73,
+      "rarity": "Common",
+      "image": "data/avatars/donnarumma.png"
+    },
+    {
+      "id": 375,
+      "name": "Alexander-Arnold",
+      "rating": 94,
+      "rarity": "Rare",
+      "image": "data/avatars/alexander_arnold.png"
+    },
+    {
+      "id": 376,
+      "name": "Xhaka",
+      "rating": 72,
+      "rarity": "Common",
+      "image": "data/avatars/xhaka.png"
+    },
+    {
+      "id": 377,
+      "name": "Mbeumo",
+      "rating": 79,
+      "rarity": "Common",
+      "image": "data/avatars/mbeumo.png"
+    },
+    {
+      "id": 378,
+      "name": "Xhaka",
+      "rating": 80,
+      "rarity": "Common",
+      "image": "data/avatars/xhaka.png"
+    },
+    {
+      "id": 379,
+      "name": "Donnarumma",
+      "rating": 89,
+      "rarity": "Common",
+      "image": "data/avatars/donnarumma.png"
+    },
+    {
+      "id": 380,
+      "name": "Xhaka",
+      "rating": 94,
+      "rarity": "Rare",
+      "image": "data/avatars/xhaka.png"
+    },
+    {
+      "id": 381,
+      "name": "Donnarumma",
+      "rating": 81,
+      "rarity": "Common",
+      "image": "data/avatars/donnarumma.png"
+    },
+    {
+      "id": 382,
+      "name": "Tillman",
+      "rating": 85,
+      "rarity": "Rare",
+      "image": "data/avatars/tillman.png"
+    },
+    {
+      "id": 383,
+      "name": "Donnarumma",
+      "rating": 94,
+      "rarity": "Rare",
+      "image": "data/avatars/donnarumma.png"
+    },
+    {
+      "id": 384,
+      "name": "Wirtz",
+      "rating": 81,
+      "rarity": "Common",
+      "image": "data/avatars/wirtz.png"
+    },
+    {
+      "id": 385,
+      "name": "De Bruyne",
+      "rating": 77,
+      "rarity": "Common",
+      "image": "data/avatars/de_bruyne.png"
+    },
+    {
+      "id": 386,
+      "name": "Son",
+      "rating": 70,
+      "rarity": "Common",
+      "image": "data/avatars/son.png"
+    },
+    {
+      "id": 387,
+      "name": "Tillman",
+      "rating": 78,
+      "rarity": "Common",
+      "image": "data/avatars/tillman.png"
+    },
+    {
+      "id": 388,
+      "name": "Alexander-Arnold",
+      "rating": 94,
+      "rarity": "Common",
+      "image": "data/avatars/alexander_arnold.png"
+    },
+    {
+      "id": 389,
+      "name": "Rabiot",
+      "rating": 67,
+      "rarity": "Rare",
+      "image": "data/avatars/rabiot.png"
+    },
+    {
+      "id": 390,
+      "name": "Alexander-Arnold",
+      "rating": 70,
+      "rarity": "Common",
+      "image": "data/avatars/alexander_arnold.png"
+    },
+    {
+      "id": 391,
+      "name": "De Bruyne",
+      "rating": 76,
+      "rarity": "Common",
+      "image": "data/avatars/de_bruyne.png"
+    },
+    {
+      "id": 392,
+      "name": "Gyokeres",
+      "rating": 89,
+      "rarity": "Common",
+      "image": "data/avatars/gyokeres.png"
+    },
+    {
+      "id": 393,
+      "name": "Mbeumo",
+      "rating": 85,
+      "rarity": "Common",
+      "image": "data/avatars/mbeumo.png"
+    },
+    {
+      "id": 394,
+      "name": "Rabiot",
+      "rating": 88,
+      "rarity": "Epic",
+      "image": "data/avatars/rabiot.png"
+    },
+    {
+      "id": 395,
+      "name": "Gyokeres",
+      "rating": 76,
+      "rarity": "Epic",
+      "image": "data/avatars/gyokeres.png"
+    },
+    {
+      "id": 396,
+      "name": "Gyokeres",
+      "rating": 70,
+      "rarity": "Common",
+      "image": "data/avatars/gyokeres.png"
+    },
+    {
+      "id": 397,
+      "name": "Alexander-Arnold",
+      "rating": 83,
+      "rarity": "Common",
+      "image": "data/avatars/alexander_arnold.png"
+    },
+    {
+      "id": 398,
+      "name": "Mbeumo",
+      "rating": 93,
+      "rarity": "Common",
+      "image": "data/avatars/mbeumo.png"
+    },
+    {
+      "id": 399,
+      "name": "Rabiot",
+      "rating": 71,
+      "rarity": "Common",
+      "image": "data/avatars/rabiot.png"
+    },
+    {
+      "id": 400,
+      "name": "Rabiot",
+      "rating": 78,
+      "rarity": "Common",
+      "image": "data/avatars/rabiot.png"
+    },
+    {
+      "id": 401,
+      "name": "Tillman",
+      "rating": 83,
+      "rarity": "Common",
+      "image": "data/avatars/tillman.png"
+    },
+    {
+      "id": 402,
+      "name": "De Bruyne",
+      "rating": 72,
+      "rarity": "Common",
+      "image": "data/avatars/de_bruyne.png"
+    },
+    {
+      "id": 403,
+      "name": "Coman",
+      "rating": 71,
+      "rarity": "Common",
+      "image": "data/avatars/coman.png"
+    },
+    {
+      "id": 404,
+      "name": "Xhaka",
+      "rating": 92,
+      "rarity": "Rare",
+      "image": "data/avatars/xhaka.png"
+    },
+    {
+      "id": 405,
+      "name": "Alexander-Arnold",
+      "rating": 66,
+      "rarity": "Epic",
+      "image": "data/avatars/alexander_arnold.png"
+    },
+    {
+      "id": 406,
+      "name": "Alexander-Arnold",
+      "rating": 72,
+      "rarity": "Common",
+      "image": "data/avatars/alexander_arnold.png"
+    },
+    {
+      "id": 407,
+      "name": "Wirtz",
+      "rating": 65,
+      "rarity": "Common",
+      "image": "data/avatars/wirtz.png"
+    },
+    {
+      "id": 408,
+      "name": "Son",
+      "rating": 93,
+      "rarity": "Common",
+      "image": "data/avatars/son.png"
+    },
+    {
+      "id": 409,
+      "name": "Wirtz",
+      "rating": 91,
+      "rarity": "Common",
+      "image": "data/avatars/wirtz.png"
+    },
+    {
+      "id": 410,
+      "name": "De Bruyne",
+      "rating": 91,
+      "rarity": "Common",
+      "image": "data/avatars/de_bruyne.png"
+    },
+    {
+      "id": 411,
+      "name": "Donnarumma",
+      "rating": 66,
+      "rarity": "Common",
+      "image": "data/avatars/donnarumma.png"
+    },
+    {
+      "id": 412,
+      "name": "Mbeumo",
+      "rating": 72,
+      "rarity": "Common",
+      "image": "data/avatars/mbeumo.png"
+    },
+    {
+      "id": 413,
+      "name": "Xhaka",
+      "rating": 82,
+      "rarity": "Common",
+      "image": "data/avatars/xhaka.png"
+    },
+    {
+      "id": 414,
+      "name": "Gyokeres",
+      "rating": 65,
+      "rarity": "Common",
+      "image": "data/avatars/gyokeres.png"
+    },
+    {
+      "id": 415,
+      "name": "Alexander-Arnold",
+      "rating": 72,
+      "rarity": "Common",
+      "image": "data/avatars/alexander_arnold.png"
+    },
+    {
+      "id": 416,
+      "name": "Manuel Neuer",
+      "rating": 88,
+      "rarity": "or rare"
+    },
+    {
+      "id": 417,
+      "name": "Sven Ulreich",
+      "rating": 78,
+      "rarity": "or non rare"
+    },
+    {
+      "id": 418,
+      "name": "Jonas Urbig",
+      "rating": 75,
+      "rarity": "or non rare"
+    },
+    {
+      "id": 419,
+      "name": "Leon Klanac",
+      "rating": 66,
+      "rarity": "or non rare"
+    },
+    {
+      "id": 420,
+      "name": "Dayot Upamecano",
+      "rating": 85,
+      "rarity": "or rare"
+    },
+    {
+      "id": 421,
+      "name": "Kim Min-jae",
+      "rating": 86,
+      "rarity": "or rare"
+    },
+    {
+      "id": 422,
+      "name": "Jonathan Tah",
+      "rating": 85,
+      "rarity": "or rare"
+    },
+    {
+      "id": 423,
+      "name": "Hiroki Ito",
+      "rating": 81,
+      "rarity": "or non rare"
+    },
+    {
+      "id": 424,
+      "name": "Alphonso Davies",
+      "rating": 86,
+      "rarity": "or rare"
+    },
+    {
+      "id": 425,
+      "name": "Raphaël Guerreiro",
+      "rating": 83,
+      "rarity": "or rare"
+    },
+    {
+      "id": 426,
+      "name": "Sacha Boey",
+      "rating": 80,
+      "rarity": "or non rare"
+    },
+    {
+      "id": 427,
+      "name": "Josip Stanišić",
+      "rating": 80,
+      "rarity": "or non rare"
+    },
+    {
+      "id": 428,
+      "name": "Joshua Kimmich",
+      "rating": 88,
+      "rarity": "or rare"
+    },
+    {
+      "id": 429,
+      "name": "Leon Goretzka",
+      "rating": 85,
+      "rarity": "or rare"
+    },
+    {
+      "id": 430,
+      "name": "Jamal Musiala",
+      "rating": 90,
+      "rarity": "or rare"
+    },
+    {
+      "id": 431,
+      "name": "Konrad Laimer",
+      "rating": 83,
+      "rarity": "or rare"
+    },
+    {
+      "id": 432,
+      "name": "Tom Bischof",
+      "rating": 74,
+      "rarity": "or non rare"
+    },
+    {
+      "id": 433,
+      "name": "Lennart Karl",
+      "rating": 66,
+      "rarity": "or non rare"
+    },
+    {
+      "id": 434,
+      "name": "Aleksandar Pavlović",
+      "rating": 80,
+      "rarity": "or non rare"
+    },
+    {
+      "id": 435,
+      "name": "Serge Gnabry",
+      "rating": 84,
+      "rarity": "or rare"
+    },
+    {
+      "id": 436,
+      "name": "Harry Kane",
+      "rating": 92,
+      "rarity": "or rare"
+    },
+    {
+      "id": 437,
+      "name": "Nicolas Jackson",
+      "rating": 83,
+      "rarity": "or rare"
+    },
+    {
+      "id": 438,
+      "name": "Luis Díaz",
+      "rating": 86,
+      "rarity": "or rare",
+      "image": "cards/Otw/Díaz.png"
+    },
+    {
+      "id": 439,
+      "name": "Michael Olise",
+      "rating": 85,
+      "rarity": "or rare"
+    },
+    {
+      "id": 440,
+      "name": "Wisdom Mike",
+      "rating": 64,
+      "rarity": "or non rare"
+    },
+    {
+      "id": 441,
+      "name": "Tillman",
+      "rating": 87,
+      "rarity": "or non rare",
+      "image": "data/avatars/tillman.png"
+    },
+    {
+      "id": 442,
+      "name": "Xhaka",
+      "rating": 78,
+      "rarity": "or non rare",
+      "image": "data/avatars/xhaka.png"
+    },
+    {
+      "id": 443,
+      "name": "Tillman",
+      "rating": 70,
+      "rarity": "or non rare",
+      "image": "data/avatars/tillman.png"
+    },
+    {
+      "id": 444,
+      "name": "Son",
+      "rating": 83,
+      "rarity": "or non rare",
+      "image": "data/avatars/son.png"
+    },
+    {
+      "id": 445,
+      "name": "Tillman",
+      "rating": 91,
+      "rarity": "or rare",
+      "image": "data/avatars/tillman.png"
+    },
+    {
+      "id": 446,
+      "name": "De Bruyne",
+      "rating": 68,
+      "rarity": "or non rare",
+      "image": "data/avatars/de_bruyne.png"
+    },
+    {
+      "id": 447,
+      "name": "Alexander-Arnold",
+      "rating": 91,
+      "rarity": "or non rare",
+      "image": "data/avatars/alexander_arnold.png"
+    },
+    {
+      "id": 448,
+      "name": "Rabiot",
+      "rating": 76,
+      "rarity": "or non rare",
+      "image": "data/avatars/rabiot.png"
+    },
+    {
+      "id": 449,
+      "name": "Xhaka",
+      "rating": 79,
+      "rarity": "or non rare",
+      "image": "data/avatars/xhaka.png"
+    },
+    {
+      "id": 450,
+      "name": "Wirtz",
+      "rating": 66,
+      "rarity": "or non rare",
+      "image": "data/avatars/wirtz.png"
+    },
+    {
+      "id": 451,
+      "name": "Donnarumma",
+      "rating": 68,
+      "rarity": "or non rare",
+      "image": "data/avatars/donnarumma.png"
+    },
+    {
+      "id": 452,
+      "name": "Son",
+      "rating": 92,
+      "rarity": "or rare",
+      "image": "data/avatars/son.png"
+    },
+    {
+      "id": 453,
+      "name": "Coman",
+      "rating": 81,
+      "rarity": "or non rare",
+      "image": "data/avatars/coman.png"
+    },
+    {
+      "id": 454,
+      "name": "Coman",
+      "rating": 72,
+      "rarity": "or non rare",
+      "image": "data/avatars/coman.png"
+    },
+    {
+      "id": 455,
+      "name": "Xhaka",
+      "rating": 76,
+      "rarity": "or rare",
+      "image": "data/avatars/xhaka.png"
+    },
+    {
+      "id": 456,
+      "name": "Rabiot",
+      "rating": 78,
+      "rarity": "or non rare",
+      "image": "data/avatars/rabiot.png"
+    },
+    {
+      "id": 457,
+      "name": "De Bruyne",
+      "rating": 76,
+      "rarity": "or rare",
+      "image": "data/avatars/de_bruyne.png"
+    },
+    {
+      "id": 458,
+      "name": "Gyokeres",
+      "rating": 66,
+      "rarity": "or non rare",
+      "image": "data/avatars/gyokeres.png"
+    },
+    {
+      "id": 459,
+      "name": "Tillman",
+      "rating": 84,
+      "rarity": "or non rare",
+      "image": "data/avatars/tillman.png"
+    },
+    {
+      "id": 460,
+      "name": "Coman",
+      "rating": 65,
+      "rarity": "or non rare",
+      "image": "data/avatars/coman.png"
+    },
+    {
+      "id": 461,
+      "name": "Alexander-Arnold",
+      "rating": 82,
+      "rarity": "or non rare",
+      "image": "data/avatars/alexander_arnold.png"
+    },
+    {
+      "id": 462,
+      "name": "Gyokeres",
+      "rating": 65,
+      "rarity": "or non rare",
+      "image": "data/avatars/gyokeres.png"
+    },
+    {
+      "id": 463,
+      "name": "De Bruyne",
+      "rating": 76,
+      "rarity": "or non rare",
+      "image": "data/avatars/de_bruyne.png"
+    },
+    {
+      "id": 464,
+      "name": "Rabiot",
+      "rating": 65,
+      "rarity": "or non rare",
+      "image": "data/avatars/rabiot.png"
+    },
+    {
+      "id": 465,
+      "name": "Mbeumo",
+      "rating": 71,
+      "rarity": "or rare",
+      "image": "data/avatars/mbeumo.png"
+    },
+    {
+      "id": 466,
+      "name": "Wirtz",
+      "rating": 68,
+      "rarity": "or non rare",
+      "image": "data/avatars/wirtz.png"
+    },
+    {
+      "id": 467,
+      "name": "Mbeumo",
+      "rating": 80,
+      "rarity": "or non rare",
+      "image": "data/avatars/mbeumo.png"
+    },
+    {
+      "id": 468,
+      "name": "Mbeumo",
+      "rating": 66,
+      "rarity": "or non rare",
+      "image": "data/avatars/mbeumo.png"
+    },
+    {
+      "id": 469,
+      "name": "Rabiot",
+      "rating": 82,
+      "rarity": "or non rare",
+      "image": "data/avatars/rabiot.png"
+    },
+    {
+      "id": 470,
+      "name": "Rabiot",
+      "rating": 75,
+      "rarity": "or non rare",
+      "image": "data/avatars/rabiot.png"
+    },
+    {
+      "id": 471,
+      "name": "Tillman",
+      "rating": 80,
+      "rarity": "or non rare",
+      "image": "data/avatars/tillman.png"
+    },
+    {
+      "id": 472,
+      "name": "Mbeumo",
+      "rating": 74,
+      "rarity": "hero",
+      "image": "data/avatars/mbeumo.png"
+    },
+    {
+      "id": 473,
+      "name": "Xhaka",
+      "rating": 79,
+      "rarity": "or rare",
+      "image": "data/avatars/xhaka.png"
+    },
+    {
+      "id": 474,
+      "name": "Donnarumma",
+      "rating": 73,
+      "rarity": "or rare",
+      "image": "data/avatars/donnarumma.png"
+    },
+    {
+      "id": 475,
+      "name": "Mbeumo",
+      "rating": 93,
+      "rarity": "or non rare",
+      "image": "data/avatars/mbeumo.png"
+    },
+    {
+      "id": 476,
+      "name": "Son",
+      "rating": 69,
+      "rarity": "or non rare",
+      "image": "data/avatars/son.png"
+    },
+    {
+      "id": 477,
+      "name": "Wirtz",
+      "rating": 69,
+      "rarity": "or non rare",
+      "image": "data/avatars/wirtz.png"
+    },
+    {
+      "id": 478,
+      "name": "Rabiot",
+      "rating": 85,
+      "rarity": "hero",
+      "image": "data/avatars/rabiot.png"
+    },
+    {
+      "id": 479,
+      "name": "Son",
+      "rating": 93,
+      "rarity": "or non rare",
+      "image": "data/avatars/son.png"
+    },
+    {
+      "id": 480,
+      "name": "De Bruyne",
+      "rating": 93,
+      "rarity": "or non rare",
+      "image": "data/avatars/de_bruyne.png"
+    },
+    {
+      "id": 481,
+      "name": "De Bruyne",
+      "rating": 76,
+      "rarity": "or non rare",
+      "image": "data/avatars/de_bruyne.png"
+    },
+    {
+      "id": 482,
+      "name": "Wirtz",
+      "rating": 75,
+      "rarity": "or non rare",
+      "image": "data/avatars/wirtz.png"
+    },
+    {
+      "id": 483,
+      "name": "Son",
+      "rating": 67,
+      "rarity": "or non rare",
+      "image": "data/avatars/son.png"
+    },
+    {
+      "id": 484,
+      "name": "Wirtz",
+      "rating": 78,
+      "rarity": "or non rare",
+      "image": "data/avatars/wirtz.png"
+    },
+    {
+      "id": 485,
+      "name": "Alexander-Arnold",
+      "rating": 76,
+      "rarity": "or non rare",
+      "image": "data/avatars/alexander_arnold.png"
+    },
+    {
+      "id": 486,
+      "name": "Tillman",
+      "rating": 67,
+      "rarity": "or rare",
+      "image": "data/avatars/tillman.png"
+    },
+    {
+      "id": 487,
+      "name": "Mbeumo",
+      "rating": 73,
+      "rarity": "hero",
+      "image": "data/avatars/mbeumo.png"
+    },
+    {
+      "id": 488,
+      "name": "Rabiot",
+      "rating": 82,
+      "rarity": "or rare",
+      "image": "data/avatars/rabiot.png"
+    },
+    {
+      "id": 489,
+      "name": "Donnarumma",
+      "rating": 69,
+      "rarity": "or non rare",
+      "image": "data/avatars/donnarumma.png"
+    },
+    {
+      "id": 490,
+      "name": "Donnarumma",
+      "rating": 67,
+      "rarity": "or rare",
+      "image": "data/avatars/donnarumma.png"
+    },
+    {
+      "id": 491,
+      "name": "Gyokeres",
+      "rating": 92,
+      "rarity": "or non rare",
+      "image": "data/avatars/gyokeres.png"
+    },
+    {
+      "id": 492,
+      "name": "Donnarumma",
+      "rating": 76,
+      "rarity": "or non rare",
+      "image": "data/avatars/donnarumma.png"
+    },
+    {
+      "id": 493,
+      "name": "De Bruyne",
+      "rating": 68,
+      "rarity": "or non rare",
+      "image": "data/avatars/de_bruyne.png"
+    },
+    {
+      "id": 494,
+      "name": "Tillman",
+      "rating": 93,
+      "rarity": "or non rare",
+      "image": "data/avatars/tillman.png"
+    },
+    {
+      "id": 495,
+      "name": "Wirtz",
+      "rating": 71,
+      "rarity": "or non rare",
+      "image": "data/avatars/wirtz.png"
+    },
+    {
+      "id": 496,
+      "name": "Gyokeres",
+      "rating": 69,
+      "rarity": "or rare",
+      "image": "data/avatars/gyokeres.png"
+    },
+    {
+      "id": 497,
+      "name": "Coman",
+      "rating": 75,
+      "rarity": "or non rare",
+      "image": "data/avatars/coman.png"
+    },
+    {
+      "id": 498,
+      "name": "Mbeumo",
+      "rating": 66,
+      "rarity": "or rare",
+      "image": "data/avatars/mbeumo.png"
+    },
+    {
+      "id": 499,
+      "name": "Wirtz",
+      "rating": 91,
+      "rarity": "hero",
+      "image": "data/avatars/wirtz.png"
+    },
+    {
+      "id": 500,
+      "name": "Coman",
+      "rating": 69,
+      "rarity": "or non rare",
+      "image": "data/avatars/coman.png"
+    },
+    {
+      "id": 501,
+      "name": "De Bruyne",
+      "rating": 87,
+      "rarity": "or rare",
+      "image": "data/avatars/de_bruyne.png"
+    },
+    {
+      "id": 502,
+      "name": "Tillman",
+      "rating": 92,
+      "rarity": "or rare",
+      "image": "data/avatars/tillman.png"
+    },
+    {
+      "id": 503,
+      "name": "Gyokeres",
+      "rating": 87,
+      "rarity": "or rare",
+      "image": "data/avatars/gyokeres.png"
+    },
+    {
+      "id": 504,
+      "name": "Alexander-Arnold",
+      "rating": 86,
+      "rarity": "or rare",
+      "image": "data/avatars/alexander_arnold.png"
+    },
+    {
+      "id": 505,
+      "name": "Xhaka",
+      "rating": 85,
+      "rarity": "or rare",
+      "image": "data/avatars/xhaka.png"
+    },
+    {
+      "id": 506,
+      "name": "Paul Pogba",
+      "rating": 79,
+      "rarity": "or rare",
+      "image": "C:\\Users\\Utilisateur\\Desktop\\Minefut\\cards\\Or Rare\\Pogba.png"
+    }
+    ,
+    {
+      "id": 507,
+      "name": "Ousman Dembele",
+      "rating": 90,
+      "rarity": "Ballon d'or",
+      "image": "C:\\Users\\Utilisateur\\Desktop\\Minefut\\cards\\Ballon d'or\\Dembélé.png"
+    }
+    ,
+    {
+      "id": 508,
+      "name": "Tomori",
+      "rating": 81,
+      "rarity": "or rare",
+      "image": "C:\\Users\\Utilisateur\\Desktop\\Minefut\\cards\\Or Rare\\Tomori.png"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "events": {
+    "coins_spent": 2200,
+    "pack_opened": 22
+  },
+  "claimed": {},
+  "daily": {
+    "cycle_key": "2025-11-01",
+    "baseline": {
+      "coins_spent": 2200,
+      "sbc_completed": 0,
+      "pack_opened": 22
+    },
+    "claimed_ids": {}
+  }
+}
