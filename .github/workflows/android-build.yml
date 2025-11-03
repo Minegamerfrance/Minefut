@@ -34,7 +34,7 @@ jobs:
       - name: Install system dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y build-essential git zlib1g-dev libncurses5-dev libstdc++6 libffi-dev libssl-dev autoconf libtool pkg-config cmake unzip
+          sudo apt-get install -y build-essential git zlib1g-dev libncurses5-dev libstdc++6 libffi-dev libssl-dev autoconf libtool pkg-config cmake unzip zip
 
       - name: Set up Android SDK
         uses: android-actions/setup-android@v3
@@ -84,20 +84,6 @@ jobs:
 
       - name: Build debug APK with Buildozer
         working-directory: "android"
-        env:
-          JAVA_HOME: ${{ env.JAVA_HOME }}
-          ANDROID_SDK_ROOT: ${{ env.ANDROID_SDK_ROOT }}
-          ANDROID_HOME: ${{ env.ANDROID_SDK_ROOT }}
-          ANDROIDSDK: ${{ env.ANDROID_SDK_ROOT }}
-          ANDROIDNDK: ${{ env.ANDROID_SDK_ROOT }}/ndk/25.1.8937393
-          ANDROID_NDK_HOME: ${{ env.ANDROID_SDK_ROOT }}/ndk/25.1.8937393
-          ANDROID_NDK_ROOT: ${{ env.ANDROID_SDK_ROOT }}/ndk/25.1.8937393
-          ANDROID_NDK: ${{ env.ANDROID_SDK_ROOT }}/ndk/25.1.8937393
-          ANDROIDAPI: "33"
-          ANDROIDMINAPI: "21"
-          ANDROID_BUILD_TOOLS_VERSION: "33.0.2"
-          # Force Buildozer/p4a to use the modern sdkmanager (avoid deprecated tools/bin)
-          SDKMANAGER: ${{ env.ANDROID_SDK_ROOT }}/cmdline-tools/latest/bin/sdkmanager
         run: |
           set -x
           mkdir -p build-logs
@@ -110,6 +96,16 @@ jobs:
            which sdkmanager || true
            sdkmanager --list || true
           pwd; ls -la
+          # Export expected Android env vars if missing
+          export ANDROID_HOME="${ANDROID_HOME:-$ANDROID_SDK_ROOT}"
+          export ANDROIDSDK="${ANDROIDSDK:-$ANDROID_SDK_ROOT}"
+          export ANDROIDNDK="${ANDROIDNDK:-$ANDROID_SDK_ROOT/ndk/25.1.8937393}"
+          export ANDROID_NDK_HOME="${ANDROID_NDK_HOME:-$ANDROID_SDK_ROOT/ndk/25.1.8937393}"
+          export ANDROID_NDK_ROOT="${ANDROID_NDK_ROOT:-$ANDROID_SDK_ROOT/ndk/25.1.8937393}"
+          export ANDROID_NDK="${ANDROID_NDK:-$ANDROID_SDK_ROOT/ndk/25.1.8937393}"
+          export ANDROIDAPI="${ANDROIDAPI:-33}"
+          export ANDROIDMINAPI="${ANDROIDMINAPI:-21}"
+          export ANDROID_BUILD_TOOLS_VERSION="${ANDROID_BUILD_TOOLS_VERSION:-33.0.2}"
           buildozer -v android debug 2>&1 | tee build-logs/buildozer_console.log
 
       - name: Post-mortem listing (always)
