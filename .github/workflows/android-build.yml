@@ -25,15 +25,23 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: Set up Python 3.11
+      - name: Set up Python 3.10 (host)
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: '3.10'
 
       - name: Install system dependencies
         run: |
           sudo apt-get update
           sudo apt-get install -y build-essential git zlib1g-dev libncurses5-dev libstdc++6 libffi-dev libssl-dev autoconf libtool pkg-config cmake unzip
+
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Install Android SDK/NDK components
+        run: |
+          yes | sdkmanager --licenses
+          sdkmanager --install "platform-tools" "platforms;android-33" "build-tools;33.0.2" "ndk;25.1.8937393"
 
       - name: Install buildozer and python deps
         run: |
@@ -50,8 +58,19 @@ jobs:
         working-directory: "android"
         env:
           JAVA_HOME: /usr/lib/jvm/temurin-17-jdk-amd64
+          ANDROID_SDK_ROOT: ${{ env.ANDROID_SDK_ROOT }}
+          ANDROID_HOME: ${{ env.ANDROID_SDK_ROOT }}
+          ANDROIDSDK: ${{ env.ANDROID_SDK_ROOT }}
+          ANDROIDNDK: ${{ env.ANDROID_SDK_ROOT }}/ndk/25.1.8937393
+          ANDROIDAPI: "33"
+          ANDROIDMINAPI: "21"
+          ANDROID_BUILD_TOOLS_VERSION: "33.0.2"
         run: |
           mkdir -p build-logs
+          echo "Using SDK at: $ANDROID_SDK_ROOT" || true
+          echo "Installed Build-Tools:" || true
+          ls -la "$ANDROID_SDK_ROOT/build-tools" || true
+          export PATH="$ANDROID_SDK_ROOT/platform-tools:$ANDROID_SDK_ROOT/build-tools/33.0.2:$PATH"
           buildozer -v android debug 2>&1 | tee build-logs/buildozer_console.log
 
       - name: Post-mortem listing (always)
