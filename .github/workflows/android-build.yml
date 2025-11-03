@@ -108,6 +108,13 @@ jobs:
           echo "=== Tail buildozer_console.log (last 400 lines) ===" || true
           tail -n 400 android/build-logs/buildozer_console.log || true
 
+      - name: Create workspace listings (always)
+        if: always()
+        run: |
+          echo "=== Writing workspace files/dirs listings ==="
+          find . -maxdepth 4 -type f | head -n 400 > workspace-files.txt || true
+          find . -maxdepth 4 -type d | head -n 400 > workspace-dirs.txt || true
+
       - name: Upload APK artifact
         uses: actions/upload-artifact@v4
         with:
@@ -126,4 +133,6 @@ jobs:
             android/.buildozer/**
             android/build-logs/**
             /home/runner/.buildozer/**
+            workspace-files.txt
+            workspace-dirs.txt
           if-no-files-found: warn
