@@ -20,8 +20,8 @@ requirements = python3==3.10.12, setuptools, pygame==2.5.2
 # App settings
 orientation = landscape
 fullscreen = 1
-version = 0.1.0
-numeric_version = 1
+version = 0.1.1
+numeric_version = 2
 
 # Android target
 android.api = 33
