@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Buildozer / Android build outputs
+.buildozer/
+bin/
+*.apk
+*.aab
+
+# Virtual envs
+venv/
+.venv/
+env/
+
+# OS files
+*.DS_Store
+Thumbs.db
+
+# Local tools/archives
+*.zip
+*.tar
+*.tar.gz
+
+# Ignore nested repos you don't want to commit
+Minefut-APK/
+Minegamer-France/

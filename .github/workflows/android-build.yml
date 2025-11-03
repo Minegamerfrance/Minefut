@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - 'test apk/**'
+      - 'android/**'
       - '.github/workflows/android-build.yml'
       - 'main.py'
       - 'game/**'
@@ -40,16 +40,22 @@ jobs:
           python -m pip install --upgrade pip cython
           python -m pip install --upgrade buildozer
 
+      - name: Show spec file
+        run: |
+          ls -la
+          ls -la android
+          sed -n '1,200p' android/buildozer.spec || true
+
       - name: Build debug APK with Buildozer
-        working-directory: "test apk"
+        working-directory: "android"
         env:
           JAVA_HOME: /usr/lib/jvm/temurin-17-jdk-amd64
         run: |
-          buildozer -v android debug
+          buildozer --storage-dir /tmp/buildozer_storage -v android debug
 
       - name: Upload APK artifact
         uses: actions/upload-artifact@v4
         with:
           name: minefut-apk
           path: |
-            test apk/bin/*.apk
+            android/bin/*.apk
