@@ -4,7 +4,27 @@
     "launch": [
       1,
       2,
-      3
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      18
+    ],
+    "retro": [
+      1,
+      2,
+      3,
+      4
     ]
   },
   "unlocked": [
@@ -19,10 +39,10 @@
     "sbc_icon": false
   },
   "start_xp": {
-    "launch": 0,
-    "retro": 290
+    "launch": 570,
+    "retro": 1180
   },
   "frozen_xp": {
-    "launch": 290
+    "launch": 1180
   }
 }

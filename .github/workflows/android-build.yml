@@ -54,6 +54,16 @@ jobs:
           mkdir -p build-logs
           buildozer -v android debug 2>&1 | tee build-logs/buildozer_console.log
 
+      - name: Post-mortem listing (always)
+        if: always()
+        run: |
+          echo "=== List android/bin ===" || true
+          ls -la android/bin || true
+          echo "=== Tail android/.buildozer/log ===" || true
+          find android/.buildozer -type f -name "*.log" -print -exec tail -n 200 {} \; || true
+          echo "=== Tail home .buildozer logs ===" || true
+          find $HOME/.buildozer -type f -name "*.log" -print -exec tail -n 200 {} \; || true
+
       - name: Upload APK artifact
         uses: actions/upload-artifact@v4
         with:
@@ -69,4 +79,5 @@ jobs:
           path: |
             android/.buildozer/**
             android/build-logs/**
+            /home/runner/.buildozer/**
           if-no-files-found: warn
