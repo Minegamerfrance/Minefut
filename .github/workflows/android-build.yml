@@ -59,3 +59,13 @@ jobs:
           name: minefut-apk
           path: |
             android/bin/*.apk
+
+      - name: Upload Buildozer logs (always)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: buildozer-logs
+          path: |
+            /tmp/buildozer_storage/**
+            android/.buildozer/**
+          if-no-files-found: warn
