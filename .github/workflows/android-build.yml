@@ -51,7 +51,7 @@ jobs:
         env:
           JAVA_HOME: /usr/lib/jvm/temurin-17-jdk-amd64
         run: |
-          buildozer --storage-dir /tmp/buildozer_storage -v android debug
+          buildozer -v android debug
 
       - name: Upload APK artifact
         uses: actions/upload-artifact@v4
@@ -66,6 +66,5 @@ jobs:
         with:
           name: buildozer-logs
           path: |
-            /tmp/buildozer_storage/**
             android/.buildozer/**
           if-no-files-found: warn
