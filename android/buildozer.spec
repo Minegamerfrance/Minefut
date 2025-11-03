@@ -14,7 +14,7 @@ exclude_patterns = __pycache__ , *.pyc , *.pyo , *.orig , *.bak , .git , .github
 
 # Python-for-Android requirements
 # Include pygame and common SDL2 add-ons used by pygame builds
-requirements = python3, setuptools, pygame, sdl2_ttf, sdl2_image, sdl2_mixer
+requirements = python3, setuptools, pygame==2.5.2, sdl2_ttf, sdl2_image, sdl2_mixer
 
 # App settings
 orientation = landscape
