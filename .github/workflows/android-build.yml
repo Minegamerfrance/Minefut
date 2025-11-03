@@ -44,6 +44,11 @@ jobs:
           # Ensure modern cmdline-tools are installed under cmdline-tools/latest
           sdkmanager --install "cmdline-tools;latest"
           sdkmanager --install "platform-tools" "platforms;android-33" "build-tools;33.0.2" "ndk;25.1.8937393"
+          echo "Using ANDROID_SDK_ROOT=$ANDROID_SDK_ROOT"
+          echo "Listing cmdline-tools:"; ls -la "$ANDROID_SDK_ROOT/cmdline-tools" || true
+          echo "sdkmanager from latest:"; "$ANDROID_SDK_ROOT/cmdline-tools/latest/bin/sdkmanager" --version || true
+          echo "Removing legacy SDK tools directory if present to avoid old sdkmanager..."
+          if [ -d "$ANDROID_SDK_ROOT/tools" ]; then rm -rf "$ANDROID_SDK_ROOT/tools"; fi
 
       - name: Install buildozer and python deps
         run: |
@@ -80,6 +85,10 @@ jobs:
           ls -la "$ANDROID_SDK_ROOT/build-tools" || true
           # Prefer cmdline-tools/latest and ensure it's ahead in PATH so p4a finds it
           export PATH="$ANDROID_SDK_ROOT/cmdline-tools/latest/bin:$ANDROID_SDK_ROOT/platform-tools:$ANDROID_SDK_ROOT/build-tools/33.0.2:$PATH"
+          echo "Ensuring legacy tools are absent before build..."
+          if [ -d "$ANDROID_SDK_ROOT/tools" ]; then rm -rf "$ANDROID_SDK_ROOT/tools"; fi
+          echo "sdkmanager binary in PATH:"; which sdkmanager || true
+          sdkmanager --version || true
           buildozer -v android debug 2>&1 | tee build-logs/buildozer_console.log
 
       - name: Post-mortem listing (always)
