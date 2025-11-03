@@ -33,8 +33,8 @@ android.build_tools_version = 33.0.2
 # Pin the NDK API level commonly used with r25b
 android.ndk_api = 21
 
-# Force SDL2 bootstrap for pygame
-android.bootstrap = sdl2
+# Force SDL2 bootstrap for pygame (use new key)
+p4a.bootstrap = sdl2
 
 # Force Buildozer to use the preinstalled Android SDK/NDK provided by CI
 android.sdk_path = /usr/local/lib/android/sdk

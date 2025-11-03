@@ -41,6 +41,8 @@ jobs:
       - name: Install Android SDK/NDK components
         run: |
           yes | sdkmanager --licenses
+          # Ensure modern cmdline-tools are installed under cmdline-tools/latest
+          sdkmanager --install "cmdline-tools;latest"
           sdkmanager --install "platform-tools" "platforms;android-33" "build-tools;33.0.2" "ndk;25.1.8937393"
 
       - name: Install buildozer and python deps
@@ -63,16 +65,21 @@ jobs:
           ANDROIDSDK: ${{ env.ANDROID_SDK_ROOT }}
           ANDROIDNDK: ${{ env.ANDROID_SDK_ROOT }}/ndk/25.1.8937393
           ANDROID_NDK_HOME: ${{ env.ANDROID_SDK_ROOT }}/ndk/25.1.8937393
+          ANDROID_NDK_ROOT: ${{ env.ANDROID_SDK_ROOT }}/ndk/25.1.8937393
+          ANDROID_NDK: ${{ env.ANDROID_SDK_ROOT }}/ndk/25.1.8937393
           ANDROIDAPI: "33"
           ANDROIDMINAPI: "21"
           ANDROID_BUILD_TOOLS_VERSION: "33.0.2"
+          # Force Buildozer/p4a to use the modern sdkmanager (avoid deprecated tools/bin)
+          SDKMANAGER: ${{ env.ANDROID_SDK_ROOT }}/cmdline-tools/latest/bin/sdkmanager
         run: |
           mkdir -p build-logs
           echo "java -version:"; java -version || true
           echo "Using SDK at: $ANDROID_SDK_ROOT" || true
           echo "Installed Build-Tools:" || true
           ls -la "$ANDROID_SDK_ROOT/build-tools" || true
-          export PATH="$ANDROID_SDK_ROOT/platform-tools:$ANDROID_SDK_ROOT/build-tools/33.0.2:$PATH"
+          # Prefer cmdline-tools/latest and ensure it's ahead in PATH so p4a finds it
+          export PATH="$ANDROID_SDK_ROOT/cmdline-tools/latest/bin:$ANDROID_SDK_ROOT/platform-tools:$ANDROID_SDK_ROOT/build-tools/33.0.2:$PATH"
           buildozer -v android debug 2>&1 | tee build-logs/buildozer_console.log
 
       - name: Post-mortem listing (always)
