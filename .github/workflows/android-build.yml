@@ -88,6 +88,8 @@ jobs:
         run: |
           echo "=== List android/bin ===" || true
           ls -la android/bin || true
+          echo "=== Find APKs anywhere under android/.buildozer dists ===" || true
+          find android/.buildozer -type f -name "*.apk" -print || true
           echo "=== Tail android/.buildozer/log ===" || true
           find android/.buildozer -type f -name "*.log" -print -exec tail -n 200 {} \; || true
           echo "=== Tail home .buildozer logs ===" || true
@@ -101,6 +103,8 @@ jobs:
           name: minefut-apk
           path: |
             android/bin/*.apk
+            android/.buildozer/**/dists/*/bin/*.apk
+          if-no-files-found: warn
 
       - name: Upload Buildozer logs (always)
         if: always()
