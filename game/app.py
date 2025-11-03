@@ -241,6 +241,8 @@ class Packs(Screen):
         # track which cards have been recorded into collection during reveal
         self._revealed_recorded: set[int] = set()
         self.message = ''
+        # pause auto-reveal while a modal overlay animation (staged reveal) is playing
+        self._pause_reveal: bool = False
 
     def handle(self, event: pygame.event.Event):
         if event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
@@ -286,8 +288,18 @@ class Packs(Screen):
             defi_mod.add_progress('pack_opened', 1)
         except Exception:
             pass
+        # Launch FIFA-style staged reveal overlay (nation → league → club → player)
+        try:
+            if self.generated:
+                self._pause_reveal = True
+                self.app.push(PackRevealOverlay(self.app, self.generated, parent=self))
+        except Exception:
+            # if overlay fails, ensure reveal continues
+            self._pause_reveal = False
 
     def update(self, dt: float):
+        if self._pause_reveal:
+            return
         if self.generated:
             if time.time() - self.last_reveal > 0.45 and self.revealed_index < len(self.generated) - 1:
                 self.revealed_index += 1
@@ -2129,6 +2141,95 @@ class DefiGroupDetail(Screen):
         hint = self.app.h5.render('[Esc] Retour', True, (150, 150, 160))
         screen.blit(hint, (w - hint.get_width() - 32, 32))
 
+
+class PackRevealOverlay(Screen):
+    """Fullscreen overlay to play a staged reveal: Nation → League → Club → Player.
+    Pauses the parent Packs screen's auto-reveal while active.
+    """
+    def __init__(self, app: 'App', cards: List[Card], parent: 'Packs'):
+        super().__init__(app)
+        self.parent = parent
+        self.cards = cards
+        # choose the best card to showcase (Icon > Hero > OTW > Or rare > Or non rare, tie-break by rating)
+        order = {'or non rare': 0, 'or rare': 1, 'otw': 2, 'hero': 3, 'icon': 4}
+        self.card = max(cards, key=lambda c: (order.get(str(c.rarity).lower(), 0), int(getattr(c, 'rating', 0)))) if cards else None
+        self.stages = []
+        if self.card is not None:
+            self.stages = [
+                ('Pays', getattr(self.card, 'nation', None) or 'Inconnu'),
+                ('Championnat', getattr(self.card, 'league', None) or 'Inconnu'),
+                ('Club', getattr(self.card, 'club', None) or 'Inconnu'),
+                ('Joueur', self.card.name),
+            ]
+        self.stage_idx = 0
+        self.t0 = time.time()
+        self.durations = [1.0, 1.0, 1.0, 1.2]
+        self.finished = False
+
+    def _advance(self):
+        self.stage_idx += 1
+        self.t0 = time.time()
+        if self.stage_idx >= len(self.stages):
+            self.finished = True
+            # resume parent reveal and close overlay
+            try:
+                if hasattr(self.parent, '_pause_reveal'):
+                    self.parent._pause_reveal = False
+            except Exception:
+                pass
+            self.app.pop()
+
+    def handle(self, event: pygame.event.Event):
+        if event.type == pygame.KEYDOWN or (event.type == pygame.MOUSEBUTTONDOWN and event.button == 1):
+            self._advance()
+
+    def update(self, dt: float):
+        if self.finished or not self.stages:
+            return
+        now = time.time()
+        if now - self.t0 >= self.durations[min(self.stage_idx, len(self.durations)-1)]:
+            self._advance()
+
+    def draw(self, screen: pygame.Surface):
+        w, h = self.app.size
+        # dim background
+        overlay = pygame.Surface((w, h), pygame.SRCALPHA)
+        overlay.fill((0, 0, 0, 180))
+        screen.blit(overlay, (0, 0))
+        if not self.stages:
+            return
+        title, value = self.stages[min(self.stage_idx, len(self.stages)-1)]
+        # center panel
+        panel = pygame.Rect(w // 2 - 360, h // 2 - 200, 720, 400)
+        pygame.draw.rect(screen, (24, 26, 34), panel, border_radius=16)
+        pygame.draw.rect(screen, (90, 90, 110), panel, 2, border_radius=16)
+        # stage title
+        ttl = self.app.h2.render(title, True, (235, 235, 245))
+        screen.blit(ttl, (panel.centerx - ttl.get_width() // 2, panel.y + 28))
+        # value text or player image on last stage
+        if title == 'Joueur' and self.card is not None:
+            # zoom-in progression within this stage
+            t = min(1.0, (time.time() - self.t0) / max(0.01, self.durations[-1]))
+            s = 1 - pow(1 - t, 3)
+            max_w = int(panel.w * 0.44)
+            max_h = int(panel.h * 0.58)
+            img_path = resolve_player_image_by_name_and_rarity(self.card.name, self.card.rarity)
+            if img_path is not None:
+                draw_player_png_centered(screen, img_path, (panel.centerx, panel.centery + 20), int(max_w * s), int(max_h * s))
+            nm = self.app.h3.render(self.card.name, True, (230, 230, 240))
+            screen.blit(nm, (panel.centerx - nm.get_width() // 2, panel.bottom - 84))
+            rar = self.app.h5.render(str(self.card.rarity).upper(), True, (200, 200, 210))
+            screen.blit(rar, (panel.centerx - rar.get_width() // 2, panel.bottom - 56))
+        else:
+            txt = self.app.h2.render(str(value), True, (220, 220, 230))
+            screen.blit(txt, (panel.centerx - txt.get_width() // 2, panel.centery - txt.get_height() // 2))
+        # progress dots
+        dots = len(self.stages)
+        for i in range(dots):
+            cx = panel.centerx - (dots * 18) // 2 + i * 18
+            cy = panel.bottom - 28
+            col = (220, 220, 230) if i <= self.stage_idx else (110, 110, 130)
+            pygame.draw.circle(screen, col, (cx, cy), 5)
 
 class SBCSquad(Screen):
     """Dedicated squad page for a specific SBC challenge. Only duplicates are usable."""

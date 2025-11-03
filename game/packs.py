@@ -83,5 +83,19 @@ def generate_pack(pack_name: str, count: int = 5) -> List[Card]:
         rating = min(base, 97)
         color = _color_for_rarity(rarity)
         avatar_rel = f"data/avatars/{name_entry.get('avatar', '')}" if name_entry.get('avatar') else None
-        out.append(Card(name=name, rarity=rarity, bg_color=color, rating=rating, otw=(rarity == 'otw'), avatar_path=avatar_rel))
+        # enrich with reveal metadata if available in catalog
+        nation = name_entry.get('nation')
+        league = name_entry.get('league')
+        club = name_entry.get('club')
+        out.append(Card(
+            name=name,
+            rarity=rarity,
+            bg_color=color,
+            rating=rating,
+            otw=(rarity == 'otw'),
+            avatar_path=avatar_rel,
+            nation=nation,
+            league=league,
+            club=club,
+        ))
     return out

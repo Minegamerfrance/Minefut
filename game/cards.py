@@ -11,6 +11,10 @@ class Card:
     otw: bool = False
     rating: int = 0
     avatar_path: Optional[str] = None  # relative path (e.g., 'data/avatars/name.png')
+    # New metadata for reveal sequence
+    nation: Optional[str] = None
+    league: Optional[str] = None
+    club: Optional[str] = None
     # runtime attrs set by main
     x: float = 0
     y: float = 0
@@ -40,18 +44,18 @@ def weighted_choice(rarities):
 
 
 PLAYER_CATALOG = [
-    {"name": "Donnarumma", "avatar": "donnarumma.png"},
-    {"name": "Wirtz", "avatar": "wirtz.png"},
-    {"name": "Gyokeres", "avatar": "gyokeres.png"},
-    {"name": "De Bruyne", "avatar": "de_bruyne.png"},
-    {"name": "Alexander-Arnold", "avatar": "alexander_arnold.png"},
-    {"name": "Son", "avatar": "son.png"},
-    {"name": "Mbeumo", "avatar": "mbeumo.png"},
-    {"name": "Xhaka", "avatar": "xhaka.png"},
-    {"name": "Coman", "avatar": "coman.png"},
-    {"name": "Rabiot", "avatar": "rabiot.png"},
-    {"name": "Tillman", "avatar": "tillman.png"},
-    {"name": "Paul Pogba", "avatar": "pogba.png"},
+    {"name": "Donnarumma", "avatar": "donnarumma.png", "nation": "Italie", "league": "Ligue 1", "club": "PSG"},
+    {"name": "Wirtz", "avatar": "wirtz.png", "nation": "Allemagne", "league": "Bundesliga", "club": "Leverkusen"},
+    {"name": "Gyokeres", "avatar": "gyokeres.png", "nation": "Suède", "league": "Primeira Liga", "club": "Sporting CP"},
+    {"name": "De Bruyne", "avatar": "de_bruyne.png", "nation": "Belgique", "league": "Premier League", "club": "Manchester City"},
+    {"name": "Alexander-Arnold", "avatar": "alexander_arnold.png", "nation": "Angleterre", "league": "Premier League", "club": "Liverpool"},
+    {"name": "Son", "avatar": "son.png", "nation": "Corée du Sud", "league": "Premier League", "club": "Tottenham"},
+    {"name": "Mbeumo", "avatar": "mbeumo.png", "nation": "Cameroun", "league": "Premier League", "club": "Brentford"},
+    {"name": "Xhaka", "avatar": "xhaka.png", "nation": "Suisse", "league": "Bundesliga", "club": "Leverkusen"},
+    {"name": "Coman", "avatar": "coman.png", "nation": "France", "league": "Bundesliga", "club": "Bayern Munich"},
+    {"name": "Rabiot", "avatar": "rabiot.png", "nation": "France", "league": "Serie A", "club": "Juventus"},
+    {"name": "Tillman", "avatar": "tillman.png", "nation": "USA", "league": "Eredivisie", "club": "PSV"},
+    {"name": "Paul Pogba", "avatar": "pogba.png", "nation": "France", "league": "Serie A", "club": "Juventus"},
 ]
 
 
@@ -68,5 +72,15 @@ def generate_pack(n=5):
             # OTW cards should stand out: boost rating slightly
             rating = max(rating, random.randint(88, 97))
         avatar_rel = f"data/avatars/{player['avatar']}"
-        pack.append(Card(name=name, rarity=rarity, bg_color=color, rating=rating, otw=is_otw, avatar_path=avatar_rel))
+        pack.append(Card(
+            name=name,
+            rarity=rarity,
+            bg_color=color,
+            rating=rating,
+            otw=is_otw,
+            avatar_path=avatar_rel,
+            nation=player.get("nation"),
+            league=player.get("league"),
+            club=player.get("club"),
+        ))
     return pack

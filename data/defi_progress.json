@@ -1,15 +1,14 @@
 {
   "events": {
-    "coins_spent": 7900,
-    "pack_opened": 35
+    "coins_spent": 14300,
+    "pack_opened": 59
   },
   "claimed": {},
   "daily": {
-    "cycle_key": "2025-11-02",
+    "cycle_key": "2025-11-03",
     "baseline": {
-      "coins_spent": 2200,
-      "sbc_completed": 0,
-      "pack_opened": 22
+      "coins_spent": 7900,
+      "sbc_completed": 0
     },
     "claimed_ids": {}
   }

@@ -509,8 +509,9 @@ class PackAnimation:
         self.cards = cards_list
         self.elapsed = 0.0
         self.finished = False
-        self.stage = 'intro'  # intro -> tunnel -> doors -> walkout/reveal -> fanout -> done
-        self.particles: list[LightParticle] = []
+        # intro -> tunnel -> doors -> nation -> league -> club -> reveal -> fanout -> done
+        self.stage = 'intro'
+        self.particles = []
         self.flash_alpha = 0
         self.door_progress = 0.0  # 0 closed, 1 open
         self.last_door_progress = 0.0
@@ -598,12 +599,35 @@ class PackAnimation:
                     self.impact_flash = 90
                     self.shake_time, self.shake_amp = 0.4, 6
             if self.door_progress >= 1.0:
-                self.stage = 'walkout' if self.walkout else 'reveal'
+                # After doors open, play staged reveal (nation -> league -> club -> final card)
+                # If top_card metadata missing, skip to next available stage or final reveal
+                next_stage = None
+                if self.top_card and getattr(self.top_card, 'nation', None):
+                    next_stage = 'nation'
+                elif self.top_card and getattr(self.top_card, 'league', None):
+                    next_stage = 'league'
+                elif self.top_card and getattr(self.top_card, 'club', None):
+                    next_stage = 'club'
+                else:
+                    next_stage = 'reveal'
+                self.stage = next_stage
                 self.elapsed = 0.0
             self.last_door_progress = self.door_progress
         elif self.stage == 'walkout':
             if self.elapsed > 1.3:
                 self.stage = 'reveal'
+                self.elapsed = 0.0
+        elif self.stage in ('nation', 'league', 'club'):
+            # show each info for ~1.0s then continue
+            dur = 1.2
+            if self.elapsed > dur:
+                if self.stage == 'nation' and self.top_card and getattr(self.top_card, 'league', None):
+                    self.stage = 'league'
+                elif self.stage in ('nation', 'league') and self.top_card and getattr(self.top_card, 'club', None):
+                    self.stage = 'club'
+                else:
+                    # proceed to final reveal
+                    self.stage = 'reveal'
                 self.elapsed = 0.0
         elif self.stage == 'reveal':
             self.reveal_t = min(1.0, self.elapsed / 1.0)
@@ -732,6 +756,28 @@ class PackAnimation:
             s = pygame.Surface((180, 260), pygame.SRCALPHA)
             pygame.draw.rect(s, (230, 230, 255, int(40 + 100 * (1 - t))), (0, 0, 180, 260), border_radius=12)
             surf.blit(s, (WIDTH//2 - 90 + dx, HEIGHT//2 - 130 + dy))
+        # Staged info panels
+        if self.stage in ('nation', 'league', 'club') and self.top_card:
+            label_map = {
+                'nation': ('Pays', getattr(self.top_card, 'nation', '')), 
+                'league': ('Championnat', getattr(self.top_card, 'league', '')),
+                'club': ('Club', getattr(self.top_card, 'club', '')),
+            }
+            title, value = label_map[self.stage]
+            # simple fade animation
+            t = min(1.0, self.elapsed / 0.6)
+            alpha = int(40 + 180 * t)
+            panel_w, panel_h = int(WIDTH * 0.48), int(HEIGHT * 0.22)
+            panel = pygame.Surface((panel_w, panel_h), pygame.SRCALPHA)
+            pygame.draw.rect(panel, (15, 15, 18, alpha), panel.get_rect(), border_radius=12)
+            pygame.draw.rect(panel, (*self.palette, min(220, int(180 * t))), panel.get_rect(), 3, border_radius=12)
+            # texts
+            title_s = large_font.render(f"{title}", True, (230, 230, 245))
+            val_s = large_font.render(str(value), True, (255, 255, 255))
+            panel.blit(title_s, (16, 14))
+            panel.blit(val_s, (16, 14 + title_s.get_height() + 10))
+            center = (WIDTH//2 + dx, HEIGHT//2 + dy)
+            surf.blit(panel, (center[0] - panel_w//2, center[1] - panel_h//2))
         # Reveal top card big
         if self.stage in ('reveal',) and self.top_card:
             t = getattr(self, 'reveal_t', 0.0)
