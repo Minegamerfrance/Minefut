@@ -33,8 +33,15 @@ android.build_tools_version = 33.0.2
 # Pin the NDK API level commonly used with r25b
 android.ndk_api = 21
 
-# Use a recent python-for-android branch with pygame fixes
-p4a.branch = develop
+# Force SDL2 bootstrap for pygame
+android.bootstrap = sdl2
+
+# Force Buildozer to use the preinstalled Android SDK/NDK provided by CI
+android.sdk_path = /usr/local/lib/android/sdk
+android.ndk_path = /usr/local/lib/android/sdk/ndk/25.1.8937393
+
+# Use python-for-android master branch (pairs with NDK r25b)
+p4a.branch = master
 
 # Optional: icons/presplash if you have assets (uncomment and set correct paths)
 # icon.filename = %(source.dir)s/assets/Profil/icon.png

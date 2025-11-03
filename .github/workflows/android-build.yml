@@ -62,6 +62,7 @@ jobs:
           ANDROID_HOME: ${{ env.ANDROID_SDK_ROOT }}
           ANDROIDSDK: ${{ env.ANDROID_SDK_ROOT }}
           ANDROIDNDK: ${{ env.ANDROID_SDK_ROOT }}/ndk/25.1.8937393
+          ANDROID_NDK_HOME: ${{ env.ANDROID_SDK_ROOT }}/ndk/25.1.8937393
           ANDROIDAPI: "33"
           ANDROIDMINAPI: "21"
           ANDROID_BUILD_TOOLS_VERSION: "33.0.2"
