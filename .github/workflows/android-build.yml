@@ -63,6 +63,8 @@ jobs:
           find android/.buildozer -type f -name "*.log" -print -exec tail -n 200 {} \; || true
           echo "=== Tail home .buildozer logs ===" || true
           find $HOME/.buildozer -type f -name "*.log" -print -exec tail -n 200 {} \; || true
+          echo "=== Tail buildozer_console.log (last 400 lines) ===" || true
+          tail -n 400 android/build-logs/buildozer_console.log || true
 
       - name: Upload APK artifact
         uses: actions/upload-artifact@v4
