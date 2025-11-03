@@ -10,7 +10,7 @@ entrypoint = main.py
 
 # File types to include
 source.include_exts = py,pyi,png,jpg,jpeg,gif,webp,svg,mp3,wav,ogg,ttf,otf,json,csv,ini,txt,md
-exclude_patterns = __pycache__ , *.pyc , *.pyo , *.orig , *.bak , .git , .github , */.DS_Store , Thumbs.db , tools/** , test apk/** , cards/** , Fond/**
+exclude_patterns = __pycache__ , *.pyc , *.pyo , *.orig , *.bak , .git , .github , */.DS_Store , Thumbs.db , tools/** , test apk/**
 
 # Python-for-Android requirements
 # Include pygame and common SDL2 add-ons used by pygame builds

@@ -11,6 +11,7 @@ on:
       - 'data/**'
       - 'assets/**'
       - 'Fond/**'
+      - 'cards/**'
 
 jobs:
   build:
