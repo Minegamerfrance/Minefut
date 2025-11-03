@@ -6,6 +6,7 @@ import json
 import unicodedata
 from pathlib import Path
 from typing import Optional, List, Tuple
+import os
 
 import pygame
 import random
@@ -2814,21 +2815,107 @@ class App:
         pygame.init()
         pygame.display.set_caption('Minefut — Revamp 2025')
         self.settings = app_settings.load_settings()
-        flags = pygame.SCALED
-        if self.settings.get('fullscreen'):
-            flags |= pygame.FULLSCREEN
-        self.size = (self.settings.get('width', 1920), self.settings.get('height', 1080))
-        # robust display creation with fallbacks (fixes "failed to create renderer" on some setups)
+        # Desired size from settings (will be adapted to desktop if fit_screen=True)
+        base_size = (self.settings.get('width', 1920), self.settings.get('height', 1080))
+
+        # Determine desktop size (primary monitor)
+        desktop_w, desktop_h = base_size
         try:
-            self.screen = pygame.display.set_mode(self.size, flags)
-        except Exception as e:
-            print('[Minefut] set_mode failed with SCALED/fullscreen flags, retrying windowed RESIZABLE…', e)
+            ds = pygame.display.get_desktop_sizes()
+            if ds and len(ds[0]) == 2:
+                desktop_w, desktop_h = ds[0]
+            else:
+                info = pygame.display.Info()
+                desktop_w = info.current_w or desktop_w
+                desktop_h = info.current_h or desktop_h
+        except Exception:
             try:
-                self.screen = pygame.display.set_mode(self.size, pygame.RESIZABLE)
-            except Exception as e2:
-                print('[Minefut] set_mode RESIZABLE failed, retrying 1280x720 windowed…', e2)
-                self.size = (1280, 720)
-                self.screen = pygame.display.set_mode(self.size)
+                info = pygame.display.Info()
+                desktop_w = getattr(info, 'current_w', desktop_w) or desktop_w
+                desktop_h = getattr(info, 'current_h', desktop_h) or desktop_h
+            except Exception:
+                pass
+
+        # Compute starting window size according to settings and desktop
+        self.size = base_size
+        if self.settings.get('fit_screen', True):
+            if self.settings.get('fullscreen', False):
+                # In fullscreen, match desktop resolution
+                self.size = (desktop_w, desktop_h)
+            else:
+                # Windowed: scale down to fit within desktop with margin, keep aspect ratio
+                margin = 80
+                max_w = max(640, desktop_w - margin)
+                max_h = max(480, desktop_h - margin)
+                bw, bh = base_size
+                try:
+                    scale = min(max_w / max(1, bw), max_h / max(1, bh), 1.0)
+                except Exception:
+                    scale = 1.0
+                self.size = (max(640, int(bw * scale)), max(480, int(bh * scale)))
+
+        # Env overrides for safer startup on some Windows/driver setups
+        force_windowed = str(os.getenv('MINEFUT_FORCE_WINDOWED', '')).lower() in ('1', 'true', 'yes')
+        disable_scaled = str(os.getenv('MINEFUT_DISABLE_SCALED', '')).lower() in ('1', 'true', 'yes')
+
+        # Compose initial flags
+        flags = 0 if disable_scaled else pygame.SCALED
+        if self.settings.get('fullscreen') and not force_windowed:
+            flags |= pygame.FULLSCREEN
+
+        # Helper to try setting the display mode with logging
+        def _try_mode(size: tuple[int, int], f: int, label: str) -> Optional[pygame.Surface]:
+            try:
+                return pygame.display.set_mode(size, f)
+            except Exception as ex:
+                print(f"[Minefut] set_mode failed ({label}) → {ex}")
+                return None
+
+        # Attempt 1: as configured (possibly SCALED + FULLSCREEN)
+        self.screen = _try_mode(self.size, flags, 'configured flags')
+
+        # Attempt 2: drop FULLSCREEN if it was requested
+        if self.screen is None and (flags & pygame.FULLSCREEN):
+            nf = flags & ~pygame.FULLSCREEN
+            self.screen = _try_mode(self.size, nf, 'windowed (no FULLSCREEN)')
+
+        # Attempt 3: drop SCALED and use RESIZABLE (classic surface window)
+        if self.screen is None:
+            self.screen = _try_mode(self.size, pygame.RESIZABLE, 'windowed RESIZABLE (no SCALED)')
+
+        # Attempt 4: reinit display with software renderer and retry
+        if self.screen is None:
+            try:
+                # Reinitialize display with software renderer preference
+                pygame.display.quit()
+                # Hint SDL to use software renderer; keep user-provided value if any
+                os.environ.setdefault('SDL_RENDER_DRIVER', 'software')
+                # Ensure Windows video driver explicitly (harmless on Windows)
+                os.environ.setdefault('SDL_VIDEODRIVER', 'windows')
+                pygame.display.init()
+            except Exception as ex:
+                print('[Minefut] Warning: failed to reinit display for software renderer hint:', ex)
+            # Retry in safe sequence
+            self.screen = (
+                _try_mode(self.size, 0, 'windowed (software renderer)')
+                or _try_mode(self.size, pygame.RESIZABLE, 'windowed RESIZABLE (software)')
+            )
+
+        # Attempt 5: final fallback 1280x720 plain window
+        if self.screen is None:
+            print('[Minefut] Falling back to 1280x720 windowed (no flags)…')
+            self.size = (1280, 720)
+            self.screen = _try_mode(self.size, 0, '1280x720 windowed (final)')
+
+        # If still no screen, abort with clear error
+        if self.screen is None:
+            raise SystemExit('[Minefut] Impossible de créer la fenêtre graphique (SDL/Pygame). Vérifie les pilotes/affichage.')
+        else:
+            try:
+                drv = os.environ.get('SDL_RENDER_DRIVER', '')
+                print(f"[Minefut] Display initialized: size={self.size}, driver='{drv or 'auto'}'")
+            except Exception:
+                pass
         self.clock = pygame.time.Clock()
         # fonts
         self.h1 = pygame.font.SysFont('arial', 72)
@@ -3039,6 +3126,7 @@ AVATAR_CACHE: dict[str, pygame.Surface] = {}
 BG_CACHE: dict[str, pygame.Surface] = {}
 _ROOT = Path(__file__).resolve().parents[1]
 AVATARS_DIR = _ROOT / 'data' / 'avatars'
+CARDS_DIR = _ROOT / 'cards'
 
 try:
     with (AVATARS_DIR / 'map.json').open('r', encoding='utf-8') as f:
@@ -3218,6 +3306,65 @@ def _find_image_in_rarity_dirs(base_name: str, rarity: str) -> Optional[Path]:
                     return candidate
     return None
 
+# --- Fuzzy search for player images in cards/ tree (project assets) --- #
+_CARDS_INDEX: dict[str, list[Path]] = {}
+
+def _norm_key(s: str) -> str:
+    try:
+        s2 = ''.join(c for c in unicodedata.normalize('NFKD', s) if not unicodedata.combining(c))
+    except Exception:
+        s2 = s
+    s2 = s2.lower()
+    for ch in [' ', '_', '-', "'", '.', '’']:
+        s2 = s2.replace(ch, '')
+    return s2
+
+def _build_cards_index():
+    if _CARDS_INDEX:
+        return
+    try:
+        if not CARDS_DIR.exists():
+            return
+        exts = {'.png', '.jpg', '.jpeg'}
+        for root, _dirs, files in os.walk(CARDS_DIR):
+            for fn in files:
+                p = Path(root) / fn
+                if p.suffix.lower() not in exts:
+                    continue
+                key = _norm_key(p.stem)
+                _CARDS_INDEX.setdefault(key, []).append(p)
+    except Exception:
+        # leave index possibly partial/empty
+        pass
+
+def _find_in_cards_tree_by_name(base_name: str) -> Optional[Path]:
+    if not base_name:
+        return None
+    _build_cards_index()
+    if not _CARDS_INDEX:
+        return None
+    # try a few normalized variants
+    cands = []
+    for v in _name_variants(base_name):
+        key = _norm_key(v)
+        hits = _CARDS_INDEX.get(key)
+        if hits:
+            cands.extend(hits)
+    if not cands:
+        # Try last-word heuristic (many files named by surname only)
+        parts = base_name.strip().split()
+        if len(parts) >= 2:
+            last = parts[-1]
+            lk = _norm_key(last)
+            for key, hits in _CARDS_INDEX.items():
+                if key == lk or key.startswith(lk) or lk in key:
+                    cands.extend(hits)
+        if not cands:
+            return None
+    # prefer the shallowest path (likely canonical)
+    cands.sort(key=lambda p: (len(p.parts), len(str(p))))
+    return cands[0]
+
 
 def resolve_player_image_by_name_and_rarity(name: str, rarity: Optional[str]) -> Optional[Path]:
     # Try exact name mapping first (to support variants like "#pass" / "#sbc"), then fallback to base name
@@ -3242,6 +3389,17 @@ def resolve_player_image_by_name_and_rarity(name: str, rarity: Optional[str]) ->
                 nb = _normalize_text(base)
                 for k, v in AVATAR_MAP.items():
                     if _normalize_text(str(k)) == nb:
+                        val = v
+                        break
+        # try surname mapping if still not found
+        if val is None and base and ' ' in base:
+            last = base.split()[-1]
+            if last in AVATAR_MAP:
+                val = AVATAR_MAP[last]
+            else:
+                nl = _normalize_text(last)
+                for k, v in AVATAR_MAP.items():
+                    if _normalize_text(str(k)) == nl:
                         val = v
                         break
         if val:
@@ -3269,7 +3427,11 @@ def resolve_player_image_by_name_and_rarity(name: str, rarity: Optional[str]) ->
             p = AVATARS_DIR / f"{nv}{ext}"
             if p.exists():
                 return p
-    # 4) placeholder if available
+    # 4) search in cards/ assets tree with fuzzy matching
+    p = _find_in_cards_tree_by_name(base)
+    if p is not None and p.exists():
+        return p
+    # 5) placeholder if available
     ph = AVATARS_DIR / '_placeholder.png'
     return ph if ph.exists() else None
 

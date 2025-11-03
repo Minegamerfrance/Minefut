@@ -8,6 +8,7 @@ DEFAULTS = {
     'width': 1920,
     'height': 1080,
     'fullscreen': False,
+    'fit_screen': True,  # adapte automatiquement la taille à l'écran de l'utilisateur
     'volume': 80,
     'effects_quality': 'medium',  # low | medium | high
     'show_fps': False,

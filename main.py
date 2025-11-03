@@ -8,6 +8,7 @@ from game import db as game_db
 from game import settings as game_settings
 from game import wallet
 from pathlib import Path
+import os
 import json
 from typing import Optional
 import time
@@ -16,6 +17,40 @@ WIDTH, HEIGHT = 1920, 1080
 FPS = 60
 
 pygame.init()
+
+# Load settings early to adapt window size to user screen
+CURRENT_SETTINGS = game_settings.load_settings()
+
+def _desktop_size(default=(WIDTH, HEIGHT)):
+    try:
+        ds = pygame.display.get_desktop_sizes()
+        if ds and len(ds[0]) == 2:
+            return ds[0]
+    except Exception:
+        pass
+    try:
+        info = pygame.display.Info()
+        w = getattr(info, 'current_w', default[0]) or default[0]
+        h = getattr(info, 'current_h', default[1]) or default[1]
+        return (w, h)
+    except Exception:
+        return default
+
+# Compute adaptive WIDTH/HEIGHT (windowed legacy UI)
+if CURRENT_SETTINGS.get('fit_screen', True):
+    base_w = CURRENT_SETTINGS.get('width', WIDTH)
+    base_h = CURRENT_SETTINGS.get('height', HEIGHT)
+    desk_w, desk_h = _desktop_size((base_w, base_h))
+    margin = 80
+    max_w = max(640, desk_w - margin)
+    max_h = max(480, desk_h - margin)
+    try:
+        scale = min(max_w / max(1, base_w), max_h / max(1, base_h), 1.0)
+    except Exception:
+        scale = 1.0
+    WIDTH = max(640, int(base_w * scale))
+    HEIGHT = max(480, int(base_h * scale))
+
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Minefut - Pack Demo")
 clock = pygame.time.Clock()
@@ -30,7 +65,7 @@ STATE = 'menu'  # 'menu', 'game', 'collection'
 FADE_ALPHA = 0
 FADE_SPEED = 600  # alpha per second
 ANNOUNCEMENT_OPEN = False
-CURRENT_SETTINGS = game_settings.load_settings()
+# CURRENT_SETTINGS already loaded above
 PACK_ANIM = None  # PackAnimation instance during opening
 DRAW_OFFSET = (0, 0)  # global drawing offset (used for camera shake)
 SHOP_MSG = ''
@@ -308,6 +343,20 @@ def resolve_player_image_by_name_and_rarity(name: str, rarity: Optional[str], ma
                         break
                 except Exception:
                     continue
+        # surname lookup if not found
+        if val is None and ' ' in base:
+            last = base.split()[-1]
+            if last in mapping:
+                val = mapping[last]
+            else:
+                nl = _strip_accents(last).lower()
+                for k, v in mapping.items():
+                    try:
+                        if _strip_accents(str(k)).lower() == nl:
+                            val = v
+                            break
+                    except Exception:
+                        continue
         if val:
             v = str(val)
             pv = Path(v)
@@ -333,7 +382,45 @@ def resolve_player_image_by_name_and_rarity(name: str, rarity: Optional[str], ma
     if rel:
         return rel
     # 3) filename auto-detection in root avatars
-    return guess_avatar_filename(base)
+    rel = guess_avatar_filename(base)
+    if rel:
+        return rel
+    # 4) fuzzy search inside project cards/ assets
+    try:
+        root_cards = root / 'cards'
+        if root_cards.exists():
+            def _norm_key(s: str) -> str:
+                import unicodedata as _u
+                try:
+                    s2 = ''.join(c for c in _u.normalize('NFKD', s) if not _u.combining(c))
+                except Exception:
+                    s2 = s
+                s2 = s2.lower()
+                for ch in [' ', '_', '-', "'", '.', '’']:
+                    s2 = s2.replace(ch, '')
+                return s2
+            target = _norm_key(base)
+            exts = {'.png', '.jpg', '.jpeg'}
+            best = None
+            for r, _dirs, files in os.walk(root_cards):
+                for fn in files:
+                    p = Path(r) / fn
+                    if p.suffix.lower() not in exts:
+                        continue
+                    if _norm_key(p.stem) == target:
+                        # return project-relative path
+                        try:
+                            relp = p.relative_to(root)
+                            return str(relp).replace('\\', '/')
+                        except Exception:
+                            best = p
+                            break
+            if best and best.exists():
+                return str(best).replace('\\', '/')
+    except Exception:
+        pass
+    # 5) no match
+    return None
 
 
 def draw_player_png_centered(surf: pygame.Surface, img_path: Path, center: tuple[int, int], max_w: int, max_h: int):
